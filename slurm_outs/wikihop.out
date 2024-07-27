@@ -1,0 +1,15 @@
+---------------------------------------------
+SLURM job ID:        767014
+SLURM job node list: gpu002
+DATE:                Sat Jul 27 09:56:45 AM CEST 2024
+---------------------------------------------
+Using the latest cached version of the dataset since saracandu/my_wikihop couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at /u/dssc/scandu00/.cache/huggingface/datasets/saracandu___my_wikihop/default/0.0.0/46e7f4e223b48a71073e2925accf5d3bcf71ed9a (last modified on Tue Jul 16 12:05:50 2024).
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.38s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.39s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Using the latest cached version of the dataset since saracandu/my_wikihop couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at /u/dssc/scandu00/.cache/huggingface/datasets/saracandu___my_wikihop/default/0.0.0/46e7f4e223b48a71073e2925accf5d3bcf71ed9a (last modified on Tue Jul 16 12:05:50 2024).
+You are not running the flash-attention implementation, expect numerical differences.
+DONE!

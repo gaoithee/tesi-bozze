@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Arthur&#x27;s Magazine <span class="r2">(</span><span class="r4">1844</span>–<span class="r4">1846</span><span class="r2">)</span> was an American literary periodical published in Philadelphia in the 
+19th century. Edited by T.S. Arthur, it featured work by Edgar A. Poe, J.H. Ingraham, Sarah Josepha Hale, Thomas G.
+Spear, and others. In May <span class="r4">1846</span> it was merged into <span class="r6">&quot;Godey&#x27;s Lady&#x27;s Book&quot;</span>. First for Women is a woman&#x27;s magazine 
+published by Bauer Media Group in the USA. The magazine was started in <span class="r4">1989</span>. It is based in Englewood Cliffs, New 
+Jersey. In <span class="r4">2011</span> the circulation of the magazine was <span class="r4">1</span>,<span class="r4">310</span>,<span class="r4">696</span> copies.
+<span class="r2">Input current:</span> Which magazine was started first Arthur&#x27;s Magazine or First for Women?
+<span class="r2">Output current:</span> Arthur&#x27;s Magazine was started first in <span class="r4">1844</span>, while First for Women was started in <span class="r4">1989</span>.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">2.007</span><span class="r2">):</span> Arthur&#x27;s Magazine was started first in <span class="r4">1844</span>, while First for Women was started in 
+<span class="r7">198</span><span class="r5">9(</span><span class="r5">12.558</span><span class="r5">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Arthur&#x27;s Magazine <span class="r2">(</span><span class="r4">1844</span>–<span class="r4">1846</span><span class="r2">)</span> was an American literary periodical published in 
+Philadelphia in the 19th century. Edited by T.S. Arthur, it featured work by Edgar A. Poe, J.H. Ingraham, Sarah 
+Josepha Hale, Thomas G. Spear, and others. In May <span class="r4">1846</span> it was merged into <span class="r6">&quot;Godey&#x27;s Lady&#x27;s Book&quot;</span>. First for Women is
+a woman&#x27;s magazine published by Bauer Media Group in the USA. The magazine was started in <span class="r7">198</span><span class="r1">9(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span> It is
+based in Englewood Cliffs, New Jersey. In <span class="r4">2011</span> the circulation of the magazine was <span class="r4">1</span>,<span class="r4">310</span>,<span class="r4">696</span> copies.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">2.007</span><span class="r2">):</span> Arthur&#x27;s Magazine was started first in <span class="r7">184</span><span class="r5">4(</span><span class="r5">12.039</span><span class="r5">)</span>, while First for Women was 
+started in <span class="r4">1989</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Arthur&#x27;s Magazine <span class="r2">(</span><span class="r7">18</span><span class="r1">4(</span><span class="r1">0.000</span><span class="r1">)4(</span><span class="r1">0.000</span><span class="r1">)–(</span><span class="r1">0.000</span><span class="r1">)</span><span class="r7">184</span><span class="r1">6(</span><span class="r1">0.000</span><span class="r1">)</span><span class="r2">)</span> was an American literary 
+periodical published in Philadelphia in the 19th century. Edited by T.S. Arthur, it featured work by Edgar A. Poe, 
+J.H. Ingraham, Sarah Josepha Hale, Thomas G. Spear, and others. In May <span class="r7">184</span><span class="r1">6(</span><span class="r1">0.000</span><span class="r1">)</span> it was merged into <span class="r6">&quot;Godey&#x27;s </span>
+<span class="r6">Lady&#x27;s Book&quot;</span>. First for Women is a woman&#x27;s magazine published by Bauer Media Group in the USA. The magazine was 
+started in <span class="r4">1989</span>. It is based in Englewood Cliffs, New Jersey. In <span class="r4">2011</span> the circulation of the magazine was <span class="r4">1</span>,<span class="r4">310</span>,<span class="r4">696</span>
+copies.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">2.007</span><span class="r2">):</span> Arthur&#x27;s Magazine was started first in <span class="r4">1844</span><span class="r5">,(</span><span class="r5">11.319</span><span class="r5">)</span> while First for Women was 
+started in <span class="r4">1989</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.447</span><span class="r2">):</span>    Arthur&#x27;s Magazine<span class="r1"> ((</span><span class="r1">0.639</span><span class="r1">)</span><span class="r4">1844</span><span class="r1">–(</span><span class="r1">0.800</span><span class="r1">)1(</span><span class="r1">0.889</span><span class="r1">)</span><span class="r4">846</span><span class="r2">)</span> was an American literary 
+periodical published in Philadelphia in the 19th century. Edited by T.S. Arthur, it featured work by Edgar A. Poe, 
+J.H. Ingraham, Sarah Josepha Hale, Thomas G. Spear, and others. In May <span class="r7">184</span><span class="r1">6(</span><span class="r1">0.590</span><span class="r1">) it(</span><span class="r1">0.594</span><span class="r1">)</span> was merged into 
+<span class="r6">&quot;Godey&#x27;s Lady&#x27;s Book&quot;</span>. First for Women is a woman&#x27;s magazine published by Bauer Media Group in the USA. The 
+magazine was started in <span class="r4">1989</span>. It is based in Englewood Cliffs, New Jersey. In <span class="r4">2011</span> the circulation of the magazine 
+was <span class="r4">1</span>,<span class="r4">310</span>,<span class="r4">696</span> copies.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">2.007</span><span class="r2">):</span> Arthur&#x27;s Magazine was started first in <span class="r4">1844</span>, while First for Women was started in 
+<span class="r7">1989</span><span class="r5">.(</span><span class="r5">11.316</span><span class="r5">)</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    <span class="r1">Arthur(</span><span class="r1">0.001</span><span class="r1">)</span><span class="r6">&#x27;s Magazine (1844–1846) was an American literary periodical published </span>
+<span class="r6">in Philadelphia in the 19th century. Edited by T.S. Arthur, it featured work by Edgar A. Poe, J.H. Ingraham, Sarah </span>
+<span class="r6">Josepha Hale, Thomas G. Spear, and others. In May 1846 it was merged into &quot;Godey&#x27;</span>s Lady&#x27;s Book&quot;. First for<span class="r1"> </span>
+<span class="r1">Women(</span><span class="r1">0.001</span><span class="r1">)</span> is a woman&#x27;s magazine published by Bauer Media Group in the USA. The magazine was started in 
+<span class="r7">1</span><span class="r1">9(</span><span class="r1">0.001</span><span class="r1">)</span><span class="r7">8</span><span class="r1">9(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.001</span><span class="r1">)</span> It is based in Englewood Cliffs, New Jersey. In <span class="r4">2011</span> the circulation of the magazine was
+<span class="r4">1</span>,<span class="r4">310</span>,<span class="r4">696</span> copies.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">2.007</span><span class="r2">):</span> Arthur<span class="r5">&#x27;(</span><span class="r5">3.105</span><span class="r5">)</span>s Magazine was started first in <span class="r4">1844</span>, while First for Women was 
+started in <span class="r4">1989</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    <span class="r1">Arthur(</span><span class="r1">0.002</span><span class="r1">)</span><span class="r1">&#x27;(0.007)s(0.005) Magazine(0.005) ((0.004)</span><span class="r6">1844–1846) was an American </span>
+<span class="r6">literary periodical published in Philadelphia in the 19th century. Edited by T.S. Arthur, it featured work by Edgar</span>
+<span class="r6">A. Poe, J.H. Ingraham, Sarah Josepha Hale, Thomas G. Spear, and others. In May 1846 it was merged into &quot;Godey&#x27;</span>s 
+Lady&#x27;s Book&quot;. First for Women is a woman&#x27;s magazine published by Bauer Media Group in the USA. The magazine was 
+started in <span class="r4">1989</span>. It is based in Englewood Cliffs, New Jersey. In <span class="r4">2011</span> the circulation of the magazine was <span class="r4">1</span>,<span class="r4">310</span>,<span class="r4">696</span>
+copies.
+
+</code></pre>
+</body>
+</html>
