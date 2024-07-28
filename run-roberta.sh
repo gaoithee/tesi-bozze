@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --no-requeue
 #SBATCH --account=dssc
-#SBATCH --job-name="testBART"
+#SBATCH --job-name="RoBphiH"
 #SBATCH --get-user-env
 #SBATCH --partition=GPU
 #SBATCH --nodes=1
@@ -11,7 +11,7 @@
 #SBATCH --gpus=1                  # <-- TODO adjust this
 #SBATCH --mem=20G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
-#SBATCH --output=slurm_outs/bart-naive.out
+#SBATCH --output=slurm_outs/roberta-naive-v2.out
 
 
 # Standard preamble for debugging
@@ -32,7 +32,7 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 # export <export_name>=<export_value>
 
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/bart-naive.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/roberta-naive-v2.py
 CMD="python3 -u"
 
 if [ ! -f "$FILE_NAME" ]; then

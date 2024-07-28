@@ -21,14 +21,14 @@ import warnings
 warnings.filterwarnings("ignore")
 
 dataset = load_dataset('saracandu/filtered_hotpotQA', split="train", trust_remote_code=True)
-N_examples = len(dataset['question'])
+N_examples = len(1000)
 # select a subset of the queries, just for test:
-first_queries = dataset['question']
+first_queries = dataset['question'][:N_examples]
 # same for correct answers and distractors:
-correct_answers = dataset['answer']
-possibilities = dataset['options']
+correct_answers = dataset['answer'][:N_examples]
+possibilities = dataset['options'][:N_examples]
 # and for the sources:
-sources = dataset['selected_passages']
+sources = dataset['selected_passages'][:N_examples]
 
 ##############################################################################################
 
