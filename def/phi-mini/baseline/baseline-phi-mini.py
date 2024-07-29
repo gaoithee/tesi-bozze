@@ -119,6 +119,46 @@ def thesisGeneration(query, merged, sources):
 
 #############################################
 
+def create_message_antithesis(question, candidate, options, context):
+    options_str = '", "'.join(options)
+    content = f"""
+
+    Now do the same for this question: "{question}", where options: ["{options_str}"]. Assistant:
+    """
+
+    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: \n"
+
+    messages = [
+        {"role": "system", "content": """
+        You are an helpful AI assistant. You are asked to determine the most correct answer for a given question, provided a set of possible options.
+        You also have at disposal a first tentative answer that you are required to check with respect to the question and the relevant context.
+        Your goal is to decree which is the most correct answer to the question between the available options.
+
+        Here's an example of how to do it:
+        """},
+        {"role": "user", "content": """
+        Question: What is the sun, a star or a planet?
+        Options: ['a star', 'a planet']
+        Candidate answer: a planet
+        Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
+
+        Assistant: The correct answer should be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
+        """
+        },
+        {"role": "system", "content": "Now do the same for the following question:"},
+        {"role": "user", "content": user_content}
+    ]
+
+    return messages
+
+def antithesisGeneration(query, merged, candidate, sources):
+    merged = ast.literal_eval(merged)
+    prompt = create_message_antithesis(query, candidate, merged, sources)
+    output = pipe(prompt, **generation_args)
+    return output[0]['generated_text']
+
+#############################################
+
 def create_message_presynthesis(question, candidate, suggestion, options, context):
 
     user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Suggestion: " + suggestion + "\n Context: " + context + "\n Assistant: \n"
@@ -190,18 +230,6 @@ model = AutoModelForCausalLM.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct", use_fast=False)
 new_model = models.Transformers(model, tokenizer, temperature=0.0)
 
-pipe = pipeline(
-    "text-generation",
-    model=model,
-    tokenizer=tokenizer,
-)
-
-generation_args = {
-    "max_new_tokens": 500,
-    "return_full_text": False,
-    "do_sample": False,
-}
-
 def query_model(
         system_message,
         user_message,
@@ -236,7 +264,19 @@ def query_model(
 
     answer = sequences[0]['generated_text']
     return answer 
-    
+
+pipe = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+)
+
+generation_args = {
+    "max_new_tokens": 500,
+    "return_full_text": False,
+    "do_sample": False,
+}
+
 #############################################
 
 dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
@@ -272,18 +312,14 @@ for i in range(N_rows):
 
 
 # ANTITHESIS
-bart_answers = []
+ant_answers = []
 for i in range(N_rows):
-    if bart1[i] > bart2[i]:
-        bart_answers.append(first_nli[i])
-    else:
-        bart_answers.append(second_nli[i])
-
+    ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], answers[i], sources[i]))
 
 # SYNTHESIS
 pre_answers = []
 for i in range(N_rows):
-    pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], bart_answers[i], sources[i]))
+    pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
 
 
 # format synthesis
@@ -300,7 +336,7 @@ df = {
     'query': first_queries,
     'correct': correct_answers,
     'thesis': answers,
-    'antithesis': bart_answers,
+    'antithesis': ant_answers,
     'pre-synthesis': pre_answers,
     'synthesis': syn_answers,
     'context': sources
@@ -313,4 +349,4 @@ df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('def/phi-mini/bart-naive.csv')
+df.to_csv('phi-mini-baseline-test.csv')

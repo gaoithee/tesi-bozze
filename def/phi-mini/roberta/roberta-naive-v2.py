@@ -38,7 +38,7 @@ def clean_text_final(text):
 # prompt augmentation for the (format of the) synthesis:
 prompt_template = PromptTemplate.from_template(
 """You are a multiple-choice question answering assistant.
-Choose the most proper option between {options} that best matches with the suggestion.
+Choose the most proper option between {options} that best matches with the suggestion. 
 
 Question: {question}
 Context: {critique}
@@ -48,10 +48,10 @@ Assistant:
 """
 )
 augmentation = {"question": itemgetter("question"),
-                "options": itemgetter("options"),
+                "options": itemgetter("options"), 
                 "critique": itemgetter("critique"),
                 "context": itemgetter("context"), }
-synthesis_chain = augmentation | prompt_template
+synthesis_chain = augmentation | prompt_template 
 
 # --------------------------------------------------
 
@@ -60,11 +60,11 @@ system_message = """
     You are an helpful AI assistant.
     You are asked to determine the most correct answer for a given question.
     You have at disposal a first tentative answer (a candidate answer) and another opinion on which should be the correct option according to context (a suggestion).
-
+    
     They could agree on the correct option; in this case, directly output the option on which they agree.
     If instead they disagree, use the context to determine the correct answer for the question, given the set of possible options.
-
-    The goal of the assistant is to decree which is the most correct answer to the question between the available options.
+    
+    The goal of the assistant is to decree which is the most correct answer to the question between the available options. 
     Answer by explicitly reporting the correct answer to you.
 """
 user_message = """
@@ -90,7 +90,7 @@ def create_message_thesis(question, options, context):
 
     messages = [
         {"role": "system", "content": """
-        You are an helpful AI assistant. You have to provide helpful answers to the user’s questions based on the context:
+        You are an helpful AI assistant. You have to provide helpful answers to the user’s questions based on the context: 
         """ + context},
         {"role": "user", "content": user_content}
     ]
@@ -101,7 +101,7 @@ def extract_answer_thesis(text):
     # Trova l'indice in cui inizia il testo "Why or why not the answer is correct:"
     start_index = text.find("}]")
 
-
+    
     # Se l'indice è stato trovato, estrai la risposta corretta
     if start_index != -1:
         start_index += len("}]")
@@ -119,17 +119,44 @@ def thesisGeneration(query, merged, sources):
 
 #############################################
 
-def preSynthGeneration(query, merged, candidate_answer, critique, sources):
-    merged = ast.literal_eval(merged)
-    second_answer = query_model(system_message.format(context = sources),
-    user_message.format(question = query, options = merged, candidate_answer = candidate_answer, critique = critique, context = sources,), max_length=1024)
-    return second_answer
+def create_message_presynthesis(question, candidate, suggestion, options, context):
+
+    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Suggestion: " + suggestion + "\n Context: " + context + "\n Assistant: \n"
+
+    messages = [
+        {"role": "system", "content": """
+        You are an helpful AI assistant. You are asked to determine the most correct answer for a given question, provided a set of possible options.
+        You also have at disposal a first tentative answer and a suggestion on which is the correct answer.
+        Your goal is to decree which is the most correct answer to the question between the available options according to the context.
+
+        Here's an example of how to do it:
+        """},
+        {"role": "user", "content": """
+        Question: What is the sun, a star or a planet?
+        Options: ['a star', 'a planet']
+        Candidate answer: a planet
+        Suggestion: a star is the correct option since the context clearly specifies that the Sun is the star at the center of the Solar System
+        Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
+
+        Assistant: the correct option is 'a star', since the suggestion is grounded in the context, even if the candidate answer does not agree.
+        """
+        },
+        {"role": "system", "content": "Now do the same for the following question:"},
+        {"role": "user", "content": user_content}
+    ]
+
+    return messages
+
+def preSynthGeneration(query, candidate_answer, critique, merged, sources):
+    prompt = create_message_presynthesis(query, merged, candidate_answer, critique, sources)
+    output = pipe(prompt, **generation_args)
+    return output[0]['generated_text']
 
 #############################################
 
 def synthesisGeneration(query, merged, pre_answer, sources):
     merged = ast.literal_eval(merged)
-    augmented_prompt = synthesis_chain.invoke({'question': query,
+    augmented_prompt = synthesis_chain.invoke({'question': query, 
                                             'options': merged,
                                             'critique': pre_answer,
                                             'context': sources})
@@ -142,7 +169,7 @@ def extract_answer_synthesis(text):
     # Trova l'indice in cui inizia il testo "Why or why not the answer is correct:"
     start_index = text.find("assistant:\n")
 
-
+    
     # Se l'indice è stato trovato, estrai la risposta corretta
     if start_index != -1:
         start_index += len("assistant:\n")
@@ -163,17 +190,17 @@ model = AutoModelForCausalLM.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct", use_fast=False)
 new_model = models.Transformers(model, tokenizer, temperature=0.0)
 
-pipeline = transformers.pipeline(
+pipe = pipeline(
+    "text-generation",
     model=model,
     tokenizer=tokenizer,
-    task="text-generation",
-    do_sample=False,
-    temperature=0.0,
-    repetition_penalty=1.5,
-    return_full_text=True,
-    max_new_tokens=400,
-    top_p=0.0
 )
+
+generation_args = {
+    "max_new_tokens": 500,
+    "return_full_text": False,
+    "do_sample": False,
+}
 
 def query_model(
         system_message,
@@ -188,8 +215,8 @@ def query_model(
         {"role": "User", "content": user_message},
         ]
     prompt = pipeline.tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
+        messages, 
+        tokenize=False, 
         add_generation_prompt=True
         )
     terminators = [
@@ -208,8 +235,8 @@ def query_model(
     )
 
     answer = sequences[0]['generated_text']
-    return answer
-
+    return answer 
+    
 #############################################
 
 dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
@@ -264,7 +291,7 @@ syn_answers = []
 for i in range(N_rows):
     syn_answers.append(extract_answer_synthesis(
         synthesisGeneration(
-            first_queries[i], possibilities[i],
+            first_queries[i], possibilities[i], 
             pre_answers[i], sources[i])))
 
 #############################################
