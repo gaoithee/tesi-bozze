@@ -21,7 +21,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 dataset = load_dataset('saracandu/filtered_hotpotQA', split="train", trust_remote_code=True)
-N_examples = len(1000)
+N_examples = 1000
 # select a subset of the queries, just for test:
 first_queries = dataset['question'][:N_examples]
 # same for correct answers and distractors:
