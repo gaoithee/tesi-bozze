@@ -167,12 +167,12 @@ def synthesisGeneration(query, merged, pre_answer, sources):
 
 def extract_answer_synthesis(text):
     # Trova l'indice in cui inizia il testo "Why or why not the answer is correct:"
-    start_index = text.find("assistant:\n")
+    start_index = text.find("Assistant:\n")
 
     
     # Se l'indice è stato trovato, estrai la risposta corretta
     if start_index != -1:
-        start_index += len("assistant:\n")
+        start_index += len("Assistant:\n")
         # Estrai il testo dopo "Why or why not the answer is correct:"
         correct_answer_text = text[start_index:].strip()
         return correct_answer_text
@@ -313,4 +313,4 @@ df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('def/phi-mini/roberta-naive.csv')
+df.to_csv('def/phi-mini/roberta-naive-2.csv')

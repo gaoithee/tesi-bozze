@@ -1,6 +1,48 @@
 ---------------------------------------------
-SLURM job ID:        767242
-SLURM job node list: gpu001
-DATE:                Sun Jul 28 07:31:29 PM CEST 2024
+SLURM job ID:        767841
+SLURM job node list: gpu004
+DATE:                Tue Jul 30 01:17:49 AM CEST 2024
 ---------------------------------------------
-The file /u/dssc/scandu00/tesi-bozze/def/phi-mini/wikihop_summarization.py does not exist
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Start summarizing...
+Token indices sequence length is longer than the specified maximum sequence length for this model (2692 > 1024). Running this sequence through the model will result in indexing errors
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/def/wikihop_summarization.py", line 20, in <module>
+    summarizations.append(summarizer(df['supports'][i], max_length=400, min_length=10, do_sample=False))
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text2text_generation.py", line 269, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text2text_generation.py", line 167, in __call__
+    result = super().__call__(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1206, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1213, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1112, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text2text_generation.py", line 191, in _forward
+    output_ids = self.model.generate(**model_inputs, **generate_kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/generation/utils.py", line 1393, in generate
+    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/generation/utils.py", line 503, in _prepare_encoder_decoder_kwargs_for_generation
+    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/models/bart/modeling_bart.py", line 1154, in forward
+    embed_pos = self.embed_positions(input)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/models/bart/modeling_bart.py", line 135, in forward
+    return super().forward(positions + self.offset)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/sparse.py", line 163, in forward
+    return F.embedding(
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/functional.py", line 2237, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+IndexError: index out of range in self
+DONE!
