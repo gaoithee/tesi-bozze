@@ -337,7 +337,7 @@ df = {
     'correct': correct_answers,
     'thesis': answers,
     'antithesis': ant_answers,
-    'pre-synthesis': pre_answers_def,
+    'pre-synthesis': pre_answers,
     'synthesis': syn_answers,
     'context': sources
 } 
