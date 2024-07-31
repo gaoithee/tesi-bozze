@@ -29,7 +29,7 @@ for i in range(len(sources)):
   else:
     parts = ''
     for j in range(int(len(sources[i])/4000)):
-      temp = summarizer(sources[i][j*4000:(j+1)*4000], max_length = 100, min_length = 10, do_sample = False)
+      temp = summarizer(sources[i][j*4000:(j+1)*4000], max_length = 50, min_length = 10, do_sample = False)
       parts = parts + temp[0]['summary_text']
     summ.append(parts)
 

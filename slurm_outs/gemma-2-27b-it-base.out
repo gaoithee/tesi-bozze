@@ -1,0 +1,8 @@
+---------------------------------------------
+SLURM job ID:        771454
+SLURM job node list: gpu002
+DATE:                Wed Jul 31 07:08:29 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Downloading shards:   0%|          | 0/12 [00:00<?, ?it/s]Downloading shards:   8%|▊         | 1/12 [03:30<38:32, 210.25s/it]

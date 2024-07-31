@@ -1,0 +1,12 @@
+---------------------------------------------
+SLURM job ID:        771440
+SLURM job node list: gpu001
+DATE:                Wed Jul 31 06:34:20 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/def/gemma-2-9b-it/baseline-gemma-2-9b-it.py", line 237, in <module>
+    torch_dtype=torch.bfloat16
+NameError: name 'torch' is not defined
+DONE!
