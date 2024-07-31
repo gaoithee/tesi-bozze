@@ -1,12 +1,12 @@
 ---------------------------------------------
-SLURM job ID:        768753
-SLURM job node list: gpu003
-DATE:                Tue Jul 30 10:05:19 AM CEST 2024
+SLURM job ID:        769905
+SLURM job node list: gpu004
+DATE:                Tue Jul 30 06:01:25 PM CEST 2024
 ---------------------------------------------
 /orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
   backends.update(_get_backends("networkx.backends"))
 Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [01:21<04:03, 81.24s/it]Loading checkpoint shards:  50%|█████     | 2/4 [02:41<02:40, 80.39s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [03:31<01:06, 66.76s/it]Loading checkpoint shards: 100%|██████████| 4/4 [03:40<00:00, 43.95s/it]Loading checkpoint shards: 100%|██████████| 4/4 [03:40<00:00, 55.14s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:34<01:43, 34.51s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:10<01:10, 35.45s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:45<00:35, 35.35s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:53<00:00, 24.29s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:53<00:00, 28.29s/it]
 [2K[2K<IPython.core.display.HTML object>
 [2K[2K<IPython.core.display.HTML object>
 [2K[2K<IPython.core.display.HTML object>
@@ -407,407 +407,7 @@ Special tokens have been added in the vocabulary, make sure the associated word 
 [2K[2K<IPython.core.display.HTML object>
 [2K[2K<IPython.core.display.HTML object>
 [2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-[2K[2K<IPython.core.display.HTML object>
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:15<00:45, 15.06s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:17<00:15,  7.81s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:19<00:04,  4.92s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:19<00:00,  3.03s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:19<00:00,  4.85s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.73s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.73s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.37s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.77s/it]
 WARNING:root:Some parameters are on the meta device device because they were offloaded to the cpu.
 Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
 Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
@@ -868,3 +468,150 @@ Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
 Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
 Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
 Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/def/llama3-8b-instruct/NORAG-baseline-llama3.py", line 213, in <module>
+    prompt_template = PromptTemplate.from_template(
+NameError: name 'PromptTemplate' is not defined
+DONE!

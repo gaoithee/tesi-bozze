@@ -21,7 +21,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
-N_examples = 100
+N_examples = len(dataset)
 # select a subset of the queries, just for test:
 first_queries = dataset['question'][:N_examples]
 # same for correct answers and distractors:
@@ -203,9 +203,9 @@ def preSynthGeneration(query, candidate_answer, critique, merged, sources):
 pre_answers = []
 pre_answers_def = []
 
-for i in range(N_examples):
-    pre_answers.append(preSynthGeneration(first_queries[i], answers[i], ant_answers[i], possibilities[i], sources[i]))
-    pre_answers_def.append(extract_last_assistant_content(pre_answers[i]))
+# for i in range(N_examples):
+#     pre_answers.append(preSynthGeneration(first_queries[i], answers[i], ant_answers[i], possibilities[i], sources[i]))
+#     pre_answers_def.append(extract_last_assistant_content(pre_answers[i]))
 
 
 ##############################################################################################
@@ -253,12 +253,12 @@ def extract_answer(text):
     else:
         return "The correct answer could not be found."
 
-syn_answers = []
-for i in range(N_examples):
-    syn_answers.append(extract_answer(
-        synthesisGeneration(
-            first_queries[i], prompt_template, possibilities[i], 
-            pre_answers_def[i], sources[i])))
+# syn_answers = []
+# for i in range(N_examples):
+#     syn_answers.append(extract_answer(
+#         synthesisGeneration(
+#             first_queries[i], prompt_template, possibilities[i], 
+#             pre_answers_def[i], sources[i])))
 
 ##############################################################################################
 
@@ -267,8 +267,8 @@ df = {
     'correct': correct_answers,
     'thesis': answers,
     'antithesis': ant_answers,
-    'pre-synthesis': pre_answers_def,
-    'synthesis': syn_answers,
+#    'pre-synthesis': pre_answers_def,
+#    'synthesis': syn_answers,
     'context': sources
 } 
 
@@ -288,6 +288,6 @@ def clean_text(text):
 # Applica la funzione alla colonna 'correct answer'
 df['correct'] = df['correct'].apply(clean_text)
 df['thesis'] = df['thesis'].apply(clean_text)
-df['synthesis'] = df['synthesis'].apply(clean_text)
+# df['synthesis'] = df['synthesis'].apply(clean_text)
 
-df.to_csv('llama3-instruct-baseline.csv')
+df.to_csv('llama3-instruct-baseline-thesis-antithesis.csv')

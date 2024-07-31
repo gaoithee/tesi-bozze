@@ -32,7 +32,7 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 # export <export_name>=<export_value>
 
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/wikihop_summarization.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/summarize-wikihop.py
 CMD="python3 -u"
 
 if [ ! -f "$FILE_NAME" ]; then
