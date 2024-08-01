@@ -276,23 +276,23 @@ for i in range(N_rows):
 
 
 # ANTITHESIS
-ant_answers = []
-for i in range(N_rows):
-    ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], answers[i], sources[i]))
+# ant_answers = []
+# for i in range(N_rows):
+#     ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], answers[i], sources[i]))
 
 # SYNTHESIS
-pre_answers = []
-for i in range(N_rows):
-    pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
+# pre_answers = []
+# for i in range(N_rows):
+#     pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
 
 
 # format synthesis
-syn_answers = []
-for i in range(N_rows):
-    syn_answers.append(
-        synthesisGeneration(
-            first_queries[i], possibilities[i], 
-            pre_answers[i], sources[i]))
+# syn_answers = []
+# for i in range(N_rows):
+#     syn_answers.append(
+#         synthesisGeneration(
+#             first_queries[i], possibilities[i], 
+#             pre_answers[i], sources[i]))
 
 #############################################
 
@@ -300,9 +300,9 @@ df = {
     'query': first_queries,
     'correct': correct_answers,
     'thesis': answers,
-    'antithesis': ant_answers,
-    'pre-synthesis': pre_answers,
-    'synthesis': syn_answers,
+#    'antithesis': ant_answers,
+#    'pre-synthesis': pre_answers,
+#    'synthesis': syn_answers,
     'context': sources
 } 
 
@@ -322,8 +322,8 @@ def clean_text(text):
 # Applica la funzione alla colonna 'correct answer'
 df['correct'] = df['correct'].apply(clean_text)
 df['thesis'] = df['thesis'].apply(clean_text)
-df['synthesis'] = df['synthesis'].apply(clean_text)
+# df['synthesis'] = df['synthesis'].apply(clean_text)
 
-df.to_csv('baseline-gemma-2-27b-it.csv')
+df.to_csv('baseline-thesis-gemma-2-27b-it.csv')
 
 

@@ -11,7 +11,7 @@
 #SBATCH --gpus=1                  # <-- TODO adjust this
 #SBATCH --mem=20G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
-#SBATCH --output=slurm_outs/phi-mini-nocontext.out
+#SBATCH --output=slurm_outs/phi-mini-cot.out
 
 
 # Standard preamble for debugging
@@ -31,7 +31,7 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 # Needed exports
 # export <export_name>=<export_value>
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/nocontext-phi-mini.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/cot/cot-phi-mini.py
 
 CMD="python3 -u"
 

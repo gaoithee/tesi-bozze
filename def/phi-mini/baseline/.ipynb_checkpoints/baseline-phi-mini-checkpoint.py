@@ -207,12 +207,12 @@ def synthesisGeneration(query, merged, pre_answer, sources):
 
 def extract_answer_synthesis(text):
     # Trova l'indice in cui inizia il testo "Why or why not the answer is correct:"
-    start_index = text.find("Assistant:\n")
+    start_index = text.find("assistant:\n")
 
     
     # Se l'indice è stato trovato, estrai la risposta corretta
     if start_index != -1:
-        start_index += len("Assistant:\n")
+        start_index += len("assistant:\n")
         # Estrai il testo dopo "Why or why not the answer is correct:"
         correct_answer_text = text[start_index:].strip()
         return correct_answer_text
@@ -222,13 +222,12 @@ def extract_answer_synthesis(text):
 #############################################
 
 model = AutoModelForCausalLM.from_pretrained(
-    "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "microsoft/Phi-3-mini-4k-instruct",
     device_map="cuda",
     torch_dtype="auto",
-    token = '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',
     trust_remote_code=True,
 )
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3.1-8B-Instruct", token = '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', use_fast=False)
+tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct", use_fast=False)
 new_model = models.Transformers(model, tokenizer, temperature=0.0)
 
 def query_model(
@@ -278,7 +277,7 @@ generation_args = {
     "do_sample": False,
 }
 
-##############################################################################################
+#############################################
 
 dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
 
@@ -304,7 +303,7 @@ rob2 = dataset['ROBERTA2']
 
 N_rows = len(dataset)
 
-##############################################################################################
+#############################################
 
 # THESIS
 answers = []
@@ -331,18 +330,7 @@ for i in range(N_rows):
             first_queries[i], possibilities[i], 
             pre_answers[i], sources[i])))
 
-
-def_answers = ["The correct option is " + clean_text(correct_answer) + " due to what is said in the context." for correct_answer in correct_answers]
-
-# format synthesis
-oracle_answers = []
-for i in range(N_rows):
-    oracle_answers.append(extract_answer_synthesis(
-        synthesisGeneration(
-            first_queries[i], possibilities[i], 
-            def_answers[i], sources[i])))
-
-##############################################################################################
+#############################################
 
 df = {
     'query': first_queries,
@@ -351,27 +339,14 @@ df = {
     'antithesis': ant_answers,
     'pre-synthesis': pre_answers,
     'synthesis': syn_answers,
-    'oracle': oracle_answers,
     'context': sources
 } 
 
 df = pd.DataFrame(df)
 
-# Funzione per rimuovere le quadre e ottenere solo il contenuto
-def remove_brackets(s):
-    return s.strip("[] ")
-
-# Definisci una funzione di pulizia per rimuovere caratteri non validi
-def clean_text(text):
-    text = re.sub(r'[^\w\s.,!?\'"\-:;()]+', '', text)  # Rimuove i caratteri speciali
-    text = re.sub(r"['\"-]", '', text)  # Rimuove apostrofi, virgolette e trattini
-    text = text.lower()  # Converte in minuscolo
-    return text
-
 # Applica la funzione alla colonna 'correct answer'
 df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
-df['oracle'] = df['oracle'].apply(clean_text_final)
 
-df.to_csv('baseline-llama-3.1-instruct-8b.csv')
+df.to_csv('phi-mini-baseline-test.csv')
