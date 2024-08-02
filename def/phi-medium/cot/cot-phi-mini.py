@@ -224,12 +224,12 @@ def extract_answer_synthesis(text):
 #############################################
 
 model = AutoModelForCausalLM.from_pretrained(
-    "microsoft/Phi-3-mini-4k-instruct",
+    "microsoft/Phi-3-medium-4k-instruct",
     device_map="cuda",
     torch_dtype="auto",
     trust_remote_code=True,
 )
-tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct", use_fast=False)
+tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-medium-4k-instruct", use_fast=False)
 new_model = models.Transformers(model, tokenizer, temperature=0.0)
 
 def query_model(
@@ -351,4 +351,4 @@ df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('phi-mini-cot.csv')
+df.to_csv('phi-medium-cot.csv')

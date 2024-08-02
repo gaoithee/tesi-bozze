@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --no-requeue
 #SBATCH --account=dssc
-#SBATCH --job-name="thesis27B"
+#SBATCH --job-name="phiminiPC"
 #SBATCH --get-user-env
 #SBATCH --partition=GPU
 #SBATCH --nodes=1
@@ -9,9 +9,9 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --gpus=1                  # <-- TODO adjust this
-#SBATCH --mem=80G                             # <-- TODO adjust this
+#SBATCH --mem=20G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
-#SBATCH --output=slurm_outs/gemma-2-27b-it-antithesis.out
+#SBATCH --output=slurm_outs/phi-mini-pure-cot.out
 
 
 # Standard preamble for debugging
@@ -31,7 +31,7 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 # Needed exports
 # export <export_name>=<export_value>
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/gemma-2-27b-it/baseline-antithesis-gemma-2-27b-it.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/pure-cot/pure-cot-phimini.py
 
 CMD="python3 -u"
 
