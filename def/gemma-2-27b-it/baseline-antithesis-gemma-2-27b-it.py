@@ -274,8 +274,8 @@ N_rows = len(dataset)
 # for i in range(N_rows):
 #     answers.append(thesisGeneration(first_queries[i], possibilities[i], sources[i]))
 
-temp_df = pd.read_csv('baseline-thesis-gemma-2-27b-it.csv')
-answers = df['thesis']
+temp_df = pd.read_csv('def/gemma-2-27b-it/baseline-thesis-gemma-2-27b-it.csv')
+answers = temp_df['thesis']
 
 # ANTITHESIS
 ant_answers = []

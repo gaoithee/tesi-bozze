@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --no-requeue
 #SBATCH --account=dssc
-#SBATCH --job-name="phiminiPC"
+#SBATCH --job-name="phimedPC"
 #SBATCH --get-user-env
 #SBATCH --partition=GPU
 #SBATCH --nodes=1
@@ -11,7 +11,7 @@
 #SBATCH --gpus=1                  # <-- TODO adjust this
 #SBATCH --mem=20G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
-#SBATCH --output=slurm_outs/phi-mini-pure-cot.out
+#SBATCH --output=slurm_outs/phi-medium-pure-cot.out
 
 
 # Standard preamble for debugging
@@ -31,7 +31,7 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 # Needed exports
 # export <export_name>=<export_value>
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/pure-cot/cot-phi-mini.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-medium/pure-cot/pure-cot-phimedium.py
 
 CMD="python3 -u"
 

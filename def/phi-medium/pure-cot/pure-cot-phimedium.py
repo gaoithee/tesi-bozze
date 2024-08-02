@@ -32,12 +32,12 @@ def clean_text_final(text):
 #############################################
 
 model = AutoModelForCausalLM.from_pretrained(
-    "microsoft/Phi-3-mini-4k-instruct",
+    "microsoft/Phi-3-medium-4k-instruct",
     device_map="cuda",
     torch_dtype="auto",
     trust_remote_code=True,
 )
-tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct", use_fast=False)
+tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-medium-4k-instruct", use_fast=False)
 new_model = models.Transformers(model, tokenizer, temperature=0.0)
 
 #############################################
@@ -191,4 +191,4 @@ df = pd.DataFrame(df)
 df['correct'] = df['correct'].apply(clean_text_final)
 df['answer'] = df['answer'].apply(clean_text_final)
 
-df.to_csv('phimini-pure-cot.csv')
+df.to_csv('phimedium-pure-cot.csv')
