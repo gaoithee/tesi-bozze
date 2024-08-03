@@ -1,88 +1,8 @@
 ---------------------------------------------
-SLURM job ID:        771311
-SLURM job node list: gpu003
-DATE:                Wed Jul 31 02:46:12 PM CEST 2024
+SLURM job ID:        772761
+SLURM job node list: gpu004
+DATE:                Sat Aug  3 04:42:32 PM CEST 2024
 ---------------------------------------------
-Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
-Your max_length is set to 500, but your input_length is only 470. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=235)
-Your max_length is set to 500, but your input_length is only 352. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=176)
-Your max_length is set to 500, but your input_length is only 436. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=218)
-Your max_length is set to 500, but your input_length is only 255. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=127)
-Your max_length is set to 500, but your input_length is only 486. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=243)
-Your max_length is set to 500, but your input_length is only 441. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=220)
-Your max_length is set to 500, but your input_length is only 276. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=138)
-Your max_length is set to 500, but your input_length is only 430. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=215)
-Your max_length is set to 500, but your input_length is only 483. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=241)
-Your max_length is set to 500, but your input_length is only 433. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=216)
-Your max_length is set to 500, but your input_length is only 342. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=171)
-Your max_length is set to 500, but your input_length is only 225. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=112)
-Your max_length is set to 500, but your input_length is only 241. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=120)
-Your max_length is set to 500, but your input_length is only 253. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=126)
-Your max_length is set to 500, but your input_length is only 407. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=203)
-Your max_length is set to 500, but your input_length is only 320. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=160)
-Your max_length is set to 500, but your input_length is only 327. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=163)
-Your max_length is set to 500, but your input_length is only 289. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=144)
-Your max_length is set to 500, but your input_length is only 440. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=220)
-Your max_length is set to 500, but your input_length is only 489. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=244)
-Your max_length is set to 500, but your input_length is only 454. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=227)
-Your max_length is set to 500, but your input_length is only 385. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=192)
-Your max_length is set to 500, but your input_length is only 285. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=142)
-Your max_length is set to 500, but your input_length is only 449. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=224)
-Your max_length is set to 500, but your input_length is only 374. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=187)
-Your max_length is set to 500, but your input_length is only 210. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=105)
-Your max_length is set to 500, but your input_length is only 426. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=213)
-Your max_length is set to 500, but your input_length is only 469. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=234)
-Your max_length is set to 500, but your input_length is only 488. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=244)
-Your max_length is set to 500, but your input_length is only 355. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=177)
-Your max_length is set to 500, but your input_length is only 407. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=203)
-Your max_length is set to 500, but your input_length is only 462. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=231)
-Your max_length is set to 500, but your input_length is only 328. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=164)
-Your max_length is set to 500, but your input_length is only 143. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=71)
-Your max_length is set to 500, but your input_length is only 446. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=223)
-Your max_length is set to 500, but your input_length is only 114. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=57)
-Your max_length is set to 500, but your input_length is only 328. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=164)
-Your max_length is set to 500, but your input_length is only 392. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=196)
-Your max_length is set to 500, but your input_length is only 308. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=154)
-Your max_length is set to 500, but your input_length is only 217. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=108)
-Your max_length is set to 500, but your input_length is only 438. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=219)
-Your max_length is set to 500, but your input_length is only 466. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=233)
-Your max_length is set to 500, but your input_length is only 468. Since this is a summarization task, where outputs shorter than the input are typically wanted, you might consider decreasing max_length manually, e.g. summarizer('...', max_length=234)
-Traceback (most recent call last):
-  File "/u/dssc/scandu00/tesi-bozze/summarize-wikihop.py", line 32, in <module>
-    temp = summarizer(sources[i][j*4000:(j+1)*4000], max_length = 50, min_length = 10, do_sample = False)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text2text_generation.py", line 269, in __call__
-    return super().__call__(*args, **kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text2text_generation.py", line 167, in __call__
-    result = super().__call__(*args, **kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1254, in __call__
-    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1261, in run_single
-    model_outputs = self.forward(model_inputs, **forward_params)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1161, in forward
-    model_outputs = self._forward(model_inputs, **forward_params)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text2text_generation.py", line 191, in _forward
-    output_ids = self.model.generate(**model_inputs, **generate_kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
-    return func(*args, **kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/generation/utils.py", line 1733, in generate
-    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/generation/utils.py", line 548, in _prepare_encoder_decoder_kwargs_for_generation
-    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/models/bart/modeling_bart.py", line 1061, in forward
-    embed_pos = self.embed_positions(input)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/models/bart/modeling_bart.py", line 115, in forward
-    return super().forward(positions + self.offset)
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/sparse.py", line 163, in forward
-    return F.embedding(
-  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/functional.py", line 2237, in embedding
-    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
-IndexError: index out of range in self
-DONE!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.74s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.13s/it]
+You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset

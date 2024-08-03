@@ -9,7 +9,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --gpus=1                  # <-- TODO adjust this
-#SBATCH --mem=20G                             # <-- TODO adjust this
+#SBATCH --mem=50G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
 #SBATCH --output=slurm_outs/summarize-wikihop.out
 

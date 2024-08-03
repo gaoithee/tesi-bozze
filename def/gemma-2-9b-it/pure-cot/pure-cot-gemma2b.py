@@ -1,6 +1,7 @@
 import pandas as pd
 import ast
 import re
+import torch
 import datasets
 from datasets import load_dataset
 import transformers
@@ -64,7 +65,7 @@ def create_message_antithesis(question, options, context):
     Now do the same for this question: "{question}", where options: ["{options_str}"]. Assistant:
     """
 
-    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: \n"
+    user_content = "Question: " + question + "\n Options: " + str(options) +  "\n Context: " + context + "\n Assistant: \n"
 
     messages = [
         {"role": "user", "content": """
@@ -75,7 +76,6 @@ def create_message_antithesis(question, options, context):
         Here's an example of how to do it:
         Question: What is the sun, a star or a planet?
         Options: ['a star', 'a planet']
-        Candidate answer: a planet
         Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
         """
         },
@@ -102,9 +102,9 @@ def extract_antithesis(text):
     else:
         return None
 
-def antithesisGeneration(query, merged, candidate, sources):
+def antithesisGeneration(query, merged, sources):
     merged = ast.literal_eval(merged)
-    prompt = create_message_antithesis(query, candidate, merged, sources)
+    prompt = create_message_antithesis(query, merged, sources)
     inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
     outputs = model.generate(input_ids=inputs.to(model.device), max_new_tokens=500)
     return extract_antithesis(tokenizer.decode(outputs[0]))
