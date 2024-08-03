@@ -1,6 +1,7 @@
 import pandas as pd
 import ast
 import re
+import torch
 import datasets
 from datasets import load_dataset
 import transformers
@@ -52,6 +53,8 @@ augmentation = {"question": itemgetter("question"),
                 "critique": itemgetter("critique"),
                 "context": itemgetter("context"), }
 synthesis_chain = augmentation | prompt_template 
+
+# --------------------------------------------------
 
 #############################################
 
@@ -105,69 +108,79 @@ def create_message_antithesis(question, candidate, options, context):
     user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: \n"
 
     messages = [
-        {"role": "system", "content": """
+        {"role": "user", "content": """
         You are an helpful AI assistant. You are asked to determine the most correct answer for a given question, provided a set of possible options.
         You also have at disposal a first tentative answer that you are required to check with respect to the question and the relevant context.
         Your goal is to decree which is the most correct answer to the question between the available options.
 
         Here's an example of how to do it:
-        """},
-        {"role": "user", "content": """
         Question: What is the sun, a star or a planet?
         Options: ['a star', 'a planet']
         Candidate answer: a planet
         Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
-
-        Assistant: The correct answer should be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
         """
         },
-        {"role": "system", "content": "Now do the same for the following question:"},
-        {"role": "user", "content": user_content}
+        {"role": "assistant", "content": """
+        Assistant: \n Let's consider the options and check whether or not they are correct. The context clearly identifies the Sun as 'the star at the center of the Solar System', thus 'a star' is probably the correct option. On the opposite, 'a planet' is not mentioned in the context, thus it is unlikely to be the correct option. Therefore, the correct option is 'a star'.
+        """
+        },
+        {"role": "user", "content": "Now do the same for the following question: \n" + user_content}
     ]
 
-    return messages
+    prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    return prompt
+
+def extract_antithesis(text):
+    pattern = re.compile(r'<start_of_turn>model(.*?)<end_of_turn>', re.DOTALL)
+    matches = pattern.findall(text)
+    
+    if matches:
+        # Prendi l'ultimo match
+        extracted_text = matches[-1]
+        # Rimuovi i simboli "_"
+        cleaned_text = extracted_text.replace('▁', '').strip()
+        return cleaned_text
+    else:
+        return None
 
 def antithesisGeneration(query, merged, candidate, sources):
     merged = ast.literal_eval(merged)
     prompt = create_message_antithesis(query, candidate, merged, sources)
-    output = pipe(prompt, **generation_args)
-    return output[0]['generated_text']
+    inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
+    outputs = model.generate(input_ids=inputs.to(model.device), max_new_tokens=500)
+    return extract_antithesis(tokenizer.decode(outputs[0]))
 
 #############################################
 
 def create_message_presynthesis(question, candidate, suggestion, options, context):
-
-    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Suggestion: " + suggestion + "\n Context: " + context + "\n Assistant: \n"
-
-    messages = [
-        {"role": "system", "content": """
-        You are an helpful AI assistant. You are asked to determine the most correct answer for a given question, provided a set of possible options.
-        You also have at disposal a first tentative answer and a suggestion on which is the correct answer.
-        Your goal is to decree which is the most correct answer to the question between the available options according to the context.
-
-        Here's an example of how to do it:
-        """},
-        {"role": "user", "content": """
-        Question: What is the sun, a star or a planet?
-        Options: ['a star', 'a planet']
-        Candidate answer: a planet
-        Suggestion: a star is the correct option since the context clearly specifies that the Sun is the star at the center of the Solar System
-        Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
-
-        Assistant: the correct option is 'a star', since the suggestion is grounded in the context, even if the candidate answer does not agree.
-        """
-        },
-        {"role": "system", "content": "Now do the same for the following question:"},
-        {"role": "user", "content": user_content}
-    ]
-
-    return messages
+    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Suggestion: " + suggestion + "\n Context: " + context 
+    chat = [
+            {"role": "user", "content": """
+            You are an helpful AI assistant. You are asked to determine the most correct answer for a given question, provided a set of possible options.
+            You also have at disposal a first tentative answer that you are required to check with respect to the question and the relevant context.
+            Your goal is to decree which is the most correct answer to the question between the available options.
+    
+            Here's an example of how to do it:
+            Question: What is the sun, a star or a planet?
+            Options: ['a star', 'a planet']
+            Candidate answer: a planet
+            Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
+            """},
+            {"role": "assistant", "content": """
+            The correct answer should be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
+            """
+            },
+            {"role": "user", "content": "Now do the same for the following question: "+ user_content}
+        ]
+    prompt = tokenizer.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
+    return prompt
 
 def preSynthGeneration(query, candidate_answer, critique, merged, sources):
     prompt = create_message_presynthesis(query, merged, candidate_answer, critique, sources)
-    output = pipe(prompt, **generation_args)
-    return output[0]['generated_text']
-
+    inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
+    outputs = model.generate(input_ids=inputs.to(model.device), max_new_tokens=500)
+    return extract_antithesis(tokenizer.decode(outputs[0]))
+    
 #############################################
 
 def synthesisGeneration(query, merged, pre_answer, sources):
@@ -195,31 +208,8 @@ def extract_answer_synthesis(text):
     else:
         return "The correct answer could not be found."
 
+
 #############################################
-
-model = AutoModelForCausalLM.from_pretrained(
-    "meta-llama/Meta-Llama-3.1-8B-Instruct",
-    device_map="cuda",
-    torch_dtype="auto",
-    token = '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',
-    trust_remote_code=True,
-)
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3.1-8B-Instruct", token = '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', use_fast=False)
-new_model = models.Transformers(model, tokenizer, temperature=0.0)
-
-pipe = pipeline(
-    "text-generation",
-    model=model,
-    tokenizer=tokenizer,
-)
-
-generation_args = {
-    "max_new_tokens": 500,
-    "return_full_text": False,
-    "do_sample": False,
-}
-
-##############################################################################################
 
 dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
 
@@ -245,7 +235,30 @@ rob2 = dataset['ROBERTA2']
 
 N_rows = len(dataset)
 
-##############################################################################################
+#############################################
+
+tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b-it", token = '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', use_fast = False)
+model = AutoModelForCausalLM.from_pretrained(
+    "google/gemma-2-9b-it",
+    token = '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', 
+    torch_dtype=torch.bfloat16
+)
+
+new_model = models.Transformers(model, tokenizer, temperature=0.0)
+
+pipe = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+)
+
+generation_args = {
+    "max_new_tokens": 500,
+    "return_full_text": False,
+    "do_sample": False,
+}
+
+#############################################
 
 # THESIS
 answers = []
@@ -259,60 +272,37 @@ for i in range(N_rows):
     ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], answers[i], sources[i]))
 
 # SYNTHESIS
-pre_answers = []
-for i in range(N_rows):
-    pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
+# pre_answers = []
+# for i in range(N_rows):
+#     pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
 
 
 # format synthesis
-syn_answers = []
-for i in range(N_rows):
-    syn_answers.append(extract_answer_synthesis(
-        synthesisGeneration(
-            first_queries[i], possibilities[i], 
-            pre_answers[i], sources[i])))
+# syn_answers = []
+# for i in range(N_rows):
+#     syn_answers.append(extract_answer_synthesis(
+#        synthesisGeneration(
+#            first_queries[i], possibilities[i], 
+#            pre_answers[i], sources[i])))
 
+#############################################
 
-def_answers = ["The correct option is " + clean_text(correct_answer) + " due to what is said in the context." for correct_answer in correct_answers]
-
-# format synthesis
-oracle_answers = []
-for i in range(N_rows):
-    oracle_answers.append(extract_answer_synthesis(
-        synthesisGeneration(
-            first_queries[i], possibilities[i], 
-            def_answers[i], sources[i])))
-
-##############################################################################################
 
 df = {
     'query': first_queries,
     'correct': correct_answers,
     'thesis': answers,
     'antithesis': ant_answers,
-    'pre-synthesis': pre_answers,
-    'synthesis': syn_answers,
-    'oracle': oracle_answers,
+#    'pre-synthesis': pre_answers,
+#    'synthesis': syn_answers,
     'context': sources
 } 
 
 df = pd.DataFrame(df)
 
-# Funzione per rimuovere le quadre e ottenere solo il contenuto
-def remove_brackets(s):
-    return s.strip("[] ")
-
-# Definisci una funzione di pulizia per rimuovere caratteri non validi
-def clean_text(text):
-    text = re.sub(r'[^\w\s.,!?\'"\-:;()]+', '', text)  # Rimuove i caratteri speciali
-    text = re.sub(r"['\"-]", '', text)  # Rimuove apostrofi, virgolette e trattini
-    text = text.lower()  # Converte in minuscolo
-    return text
-
 # Applica la funzione alla colonna 'correct answer'
 df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
-df['synthesis'] = df['synthesis'].apply(clean_text_final)
-df['oracle'] = df['oracle'].apply(clean_text_final)
+# df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('baseline-llama-3.1-instruct-8b.csv')
+df.to_csv('gemma-2-9b-it-cot-pt1.csv')

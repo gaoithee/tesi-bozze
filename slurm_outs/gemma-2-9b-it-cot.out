@@ -1,0 +1,167 @@
+---------------------------------------------
+SLURM job ID:        772169
+SLURM job node list: gpu003
+DATE:                Fri Aug  2 04:20:50 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Downloading data:   0%|          | 0.00/375k [00:00<?, ?B/s]Downloading data: 100%|██████████| 375k/375k [00:00<00:00, 495kB/s]Downloading data: 100%|██████████| 375k/375k [00:00<00:00, 495kB/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 352 examples [00:00, 5789.38 examples/s]
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [03:56<11:49, 236.59s/it]Downloading shards:  50%|█████     | 2/4 [07:05<06:56, 208.42s/it]Downloading shards:  75%|███████▌  | 3/4 [09:54<03:10, 190.49s/it]Downloading shards: 100%|██████████| 4/4 [12:06<00:00, 167.51s/it]Downloading shards: 100%|██████████| 4/4 [12:06<00:00, 181.68s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.86it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.12it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.37it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.57it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.42it/s]
+Hardware accelerator e.g. GPU is available in the environment, but no `device` argument is passed to the `Pipeline` object. Model will be on CPU.
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+slurmstepd: error: *** JOB 772169 ON gpu003 CANCELLED AT 2024-08-02T20:20:55 DUE TO TIME LIMIT ***
