@@ -1,8 +1,9 @@
 ---------------------------------------------
-SLURM job ID:        772761
-SLURM job node list: gpu004
-DATE:                Sat Aug  3 04:42:32 PM CEST 2024
+SLURM job ID:        772931
+SLURM job node list: gpu001
+DATE:                Sun Aug  4 03:43:57 PM CEST 2024
 ---------------------------------------------
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.74s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.13s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:37<00:37, 37.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:04<00:00, 31.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:04<00:00, 32.03s/it]
 You are not running the flash-attention implementation, expect numerical differences.
 You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+DONE!

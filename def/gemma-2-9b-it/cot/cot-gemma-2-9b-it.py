@@ -240,6 +240,7 @@ N_rows = len(dataset)
 tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b-it", token = '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', use_fast = False)
 model = AutoModelForCausalLM.from_pretrained(
     "google/gemma-2-9b-it",
+    device_map="auto",
     token = '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', 
     torch_dtype=torch.bfloat16
 )
@@ -261,10 +262,12 @@ generation_args = {
 #############################################
 
 # THESIS
-answers = []
-for i in range(N_rows):
-    answers.append(extract_answer_thesis(thesisGeneration(first_queries[i], possibilities[i], sources[i])))
+#answers = []
+#for i in range(N_rows):
+#    answers.append(extract_answer_thesis(thesisGeneration(first_queries[i], possibilities[i], sources[i])))
 
+temp_df = pd.read_csv('def/gemma-2-9b-it/baseline-gemma-2-9b-it.csv')
+answers = temp_df['thesis']
 
 # ANTITHESIS
 ant_answers = []
@@ -272,18 +275,18 @@ for i in range(N_rows):
     ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], answers[i], sources[i]))
 
 # SYNTHESIS
-# pre_answers = []
-# for i in range(N_rows):
-#     pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
+pre_answers = []
+for i in range(N_rows):
+    pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
 
 
 # format synthesis
-# syn_answers = []
-# for i in range(N_rows):
-#     syn_answers.append(extract_answer_synthesis(
-#        synthesisGeneration(
-#            first_queries[i], possibilities[i], 
-#            pre_answers[i], sources[i])))
+syn_answers = []
+for i in range(N_rows):
+    syn_answers.append(extract_answer_synthesis(
+       synthesisGeneration(
+           first_queries[i], possibilities[i], 
+           pre_answers[i], sources[i])))
 
 #############################################
 
@@ -293,8 +296,8 @@ df = {
     'correct': correct_answers,
     'thesis': answers,
     'antithesis': ant_answers,
-#    'pre-synthesis': pre_answers,
-#    'synthesis': syn_answers,
+    'pre-synthesis': pre_answers,
+    'synthesis': syn_answers,
     'context': sources
 } 
 
@@ -303,6 +306,6 @@ df = pd.DataFrame(df)
 # Applica la funzione alla colonna 'correct answer'
 df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
-# df['synthesis'] = df['synthesis'].apply(clean_text_final)
+df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('gemma-2-9b-it-cot-pt1.csv')
+df.to_csv('gemma-2-9b-it-cot.csv')

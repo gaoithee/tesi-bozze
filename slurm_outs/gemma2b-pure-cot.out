@@ -1,11 +1,14 @@
 ---------------------------------------------
-SLURM job ID:        772670
-SLURM job node list: gpu002
-DATE:                Sat Aug  3 03:24:20 PM CEST 2024
+SLURM job ID:        772888
+SLURM job node list: gpu001
+DATE:                Sun Aug  4 12:48:25 PM CEST 2024
 ---------------------------------------------
 /orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
   backends.update(_get_backends("networkx.backends"))
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:51<00:51, 51.89s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:53<00:00, 22.33s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:53<00:00, 26.76s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:46<00:46, 46.36s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 20.41s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 24.30s/it]
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
 [2K[2K<IPython.core.display.HTML object>
 [2K[2K<IPython.core.display.HTML object>
 [2K[2K<IPython.core.display.HTML object>
