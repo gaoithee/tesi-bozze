@@ -215,12 +215,12 @@ def extract_answer_synthesis(text):
 #############################################
 
 model = AutoModelForCausalLM.from_pretrained(
-    "microsoft/Phi-3-mini-4k-instruct",
+    "microsoft/Phi-3-medium-4k-instruct",
     device_map="cuda",
     torch_dtype="auto",
     trust_remote_code=True,
 )
-tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct", use_fast=False)
+tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-medium-4k-instruct", use_fast=False)
 new_model = models.Transformers(model, tokenizer, temperature=0.0)
 
 pipe = pipeline(
@@ -237,17 +237,17 @@ generation_args = {
 
 #############################################
 
-dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
+# dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
 
 # select a subset of the queries, just for test:
-first_queries = dataset['question']
+# first_queries = dataset['question']
 
 # same for correct answers and distractors:
-correct_answers = dataset['answer']
-possibilities = dataset['options']
+# correct_answers = dataset['answer']
+# possibilities = dataset['options']
 
 # and for the sources:
-sources = dataset['passages']
+# sources = dataset['passages']
 
 #nli
 # first_nli = dataset['first nli']
@@ -259,23 +259,23 @@ sources = dataset['passages']
 # rob1 = dataset['ROBERTA1']
 # rob2 = dataset['ROBERTA2']
 
-N_rows = len(dataset)
+# N_rows = len(dataset)
 
 #############################################
 
-# df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized.csv')
+df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized.csv')
 
 # select a subset of the queries, just for test:
-# first_queries = df['query']
+first_queries = df['query']
 
 # same for correct answers and distractors:
-# correct_answers = df['answer']
-# possibilities = df['options']
+correct_answers = df['answer']
+possibilities = df['options']
 
 # and for the sources:
-# sources = df['sum_supports']
+sources = df['sum_supports']
 
-#  N_rows = len(df)
+N_rows = len(df)
 
 #############################################
 
@@ -332,4 +332,4 @@ df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('base-phimini-contextpowered-hotpotqa.csv')
+df.to_csv('base-phimedium-contextpowered-wikihop.csv')
