@@ -11,7 +11,7 @@
 #SBATCH --gpus=1                  # <-- TODO adjust this
 #SBATCH --mem=20G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
-#SBATCH --output=slurm_outs/phiMiniWikihop.out
+#SBATCH --output=slurm_outs/base-phimini-wikihop.out
 
 
 # Standard preamble for debugging
@@ -31,7 +31,7 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 # Needed exports
 # export <export_name>=<export_value>
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/NORAG-baseline-wikihop.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-mini/baseline/baseline-phi-mini.py
 
 CMD="python3 -u"
 

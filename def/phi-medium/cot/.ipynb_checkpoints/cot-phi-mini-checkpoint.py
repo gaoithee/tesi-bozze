@@ -55,28 +55,6 @@ synthesis_chain = augmentation | prompt_template
 
 # --------------------------------------------------
 
-# for generating the 'thought' of the synthesis
-system_message = """
-    You are an helpful AI assistant.
-    You are asked to determine the most correct answer for a given question.
-    You have at disposal a first tentative answer (a candidate answer) and another opinion on which should be the correct option according to context (a suggestion).
-    
-    They could agree on the correct option; in this case, directly output the option on which they agree.
-    If instead they disagree, use the context to determine the correct answer for the question, given the set of possible options.
-    
-    The goal of the assistant is to decree which is the most correct answer to the question between the available options. 
-    Answer by explicitly reporting the correct answer to you.
-"""
-user_message = """
-    Question: {question}
-    Options: {options}
-    Candidate answer: {candidate_answer}
-    Suggestion: {critique}
-    Which of the candidate answers {options} is the most proper answer for the question?
-"""
-
-# --------------------------------------------------
-
 #############################################
 
 def create_message_thesis(question, options, context):
@@ -281,29 +259,45 @@ generation_args = {
 
 #############################################
 
-dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
+# dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
 
 # select a subset of the queries, just for test:
-first_queries = dataset['question']
+# first_queries = dataset['question']
 
 # same for correct answers and distractors:
-correct_answers = dataset['answer']
-possibilities = dataset['options']
+# correct_answers = dataset['answer']
+# possibilities = dataset['options']
 
 # and for the sources:
-sources = dataset['passages']
+# sources = dataset['passages']
 
 #nli
-first_nli = dataset['first nli']
-second_nli = dataset['second nli']
+# first_nli = dataset['first nli']
+# second_nli = dataset['second nli']
 
-bart1 = dataset['BART1']
-bart2 = dataset['BART2']
+# bart1 = dataset['BART1']
+# bart2 = dataset['BART2']
 
-rob1 = dataset['ROBERTA1']
-rob2 = dataset['ROBERTA2']
+# rob1 = dataset['ROBERTA1']
+# rob2 = dataset['ROBERTA2']
 
-N_rows = len(dataset)
+# N_rows = len(dataset)
+
+#############################################
+
+df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized.csv')
+
+# select a subset of the queries, just for test:
+first_queries = df['query']
+
+# same for correct answers and distractors:
+correct_answers = df['answer']
+possibilities = df['options']
+
+# and for the sources:
+sources = df['sum_supports']
+
+N_rows = len(df)
 
 #############################################
 
@@ -351,4 +345,4 @@ df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('phi-medium-cot.csv')
+df.to_csv('phimedium-cot-wikihop.csv')

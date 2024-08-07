@@ -142,7 +142,7 @@ def create_message_antithesis(question, candidate, options, context):
         Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
         """},
         {"role": "assistant", "content": """
-        The correct answer should be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
+        The correct answer is 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
         """
         },
         {"role": "user", "content": "Now do the same for the following question: \n" + user_content}
@@ -338,6 +338,6 @@ df['synthesis'] = df['synthesis'].apply(clean_text_final)
 df['oracle'] = df['oracle'].apply(clean_text_final)
 
 
-df.to_csv('baseline-gemma-2-9b-it.csv')
+df.to_csv('baseline-is-gemma-2-9b-it.csv')
 
 

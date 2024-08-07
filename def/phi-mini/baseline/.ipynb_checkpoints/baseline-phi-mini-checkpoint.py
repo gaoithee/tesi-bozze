@@ -118,7 +118,7 @@ def create_message_antithesis(question, candidate, options, context):
         Candidate answer: a planet
         Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
 
-        Assistant: The correct answer should be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
+        Assistant: The correct answer is be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
         """
         },
         {"role": "system", "content": "Now do the same for the following question:"},
@@ -183,12 +183,12 @@ def synthesisGeneration(query, merged, pre_answer, sources):
 
 def extract_answer_synthesis(text):
     # Trova l'indice in cui inizia il testo "Why or why not the answer is correct:"
-    start_index = text.find("assistant:\n")
+    start_index = text.find("Assistant:\n")
 
     
     # Se l'indice è stato trovato, estrai la risposta corretta
     if start_index != -1:
-        start_index += len("assistant:\n")
+        start_index += len("Assistant:\n")
         # Estrai il testo dopo "Why or why not the answer is correct:"
         correct_answer_text = text[start_index:].strip()
         return correct_answer_text
@@ -220,17 +220,17 @@ generation_args = {
 
 #############################################
 
-# dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
+dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
 
 # select a subset of the queries, just for test:
-# first_queries = dataset['question']
+first_queries = dataset['question']
 
 # same for correct answers and distractors:
-# correct_answers = dataset['answer']
-# possibilities = dataset['options']
+correct_answers = dataset['answer']
+possibilities = dataset['options']
 
 # and for the sources:
-# sources = dataset['passages']
+sources = dataset['passages']
 
 #nli
 # first_nli = dataset['first nli']
@@ -242,21 +242,23 @@ generation_args = {
 # rob1 = dataset['ROBERTA1']
 # rob2 = dataset['ROBERTA2']
 
-# N_rows = len(dataset)
+N_rows = len(dataset)
 
 #############################################
 
+# df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized.csv')
+
 # select a subset of the queries, just for test:
-first_queries = df['query']
+# first_queries = df['query']
 
 # same for correct answers and distractors:
-correct_answers = df['answer']
-possibilities = df['options']
+# correct_answers = df['answer']
+# possibilities = df['options']
 
 # and for the sources:
-sources = df['sum_supports']
+# sources = df['sum_supports']
 
-N_rows = len(df)
+#  N_rows = len(df)
 
 #############################################
 
@@ -304,4 +306,4 @@ df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
 
-df.to_csv('base-phimini-wikihop.csv')
+df.to_csv('base-phimini-hotpotqa.csv')
