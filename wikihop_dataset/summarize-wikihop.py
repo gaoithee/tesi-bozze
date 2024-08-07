@@ -51,18 +51,18 @@ generation_args = {
 } 
 
 summ = []
-for i in range(200):
+for i in range(300):
     output = pipe(produce_prompt(sources[i]), **generation_args) 
     summ.append(output[0]['generated_text']) 
     torch.cuda.empty_cache()
     
-queries = dataset['cleaned_query'][400:600]
-answers = dataset['answer'][400:600]
-options = dataset['options'][400:600]
+queries = dataset['cleaned_query'][600:900]
+answers = dataset['answer'][600:900]
+options = dataset['options'][600:900]
 
 dati = {'query': queries, 'answer': answers, 'options': options, 'sum_supports': summ}
 df = pd.DataFrame(dati)
-df.to_csv('save-first401-600.csv')
+df.to_csv('save-first601-900.csv')
 
 
 
