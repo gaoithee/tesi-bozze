@@ -31,26 +31,23 @@ def clean_text_final(text):
 
 #############################################
 
-# prompts and similar things:
-
-# --------------------------------------------------
-
 # prompt augmentation for the (format of the) synthesis:
 prompt_template = PromptTemplate.from_template(
-"""You are a multiple-choice question answering assistant.
-Choose the most proper option between {options} that best matches with the suggestion. 
+"""You are an information extractor assistant.
+Choose the most proper option between {options} that best matches with the last statement inside the suggestion.
 
-Question: {question}
-Context: {critique}
-Sources: {context}
+For example: 
+Suggestion: The candidate answer is correct. The context states that Kings of Leon is an American rock band, while The New Pornographers is a Canadian indie rock band. Therefore, the correct answer is no.
+Assistant: 'no'
+
+Suggestion: {suggestion}
 
 Assistant:
 """
 )
-augmentation = {"question": itemgetter("question"),
-                "options": itemgetter("options"), 
-                "critique": itemgetter("critique"),
-                "context": itemgetter("context"), }
+augmentation = {"options": itemgetter("options"), 
+                "suggestion": itemgetter("suggestion")
+               }
 synthesis_chain = augmentation | prompt_template 
 
 #############################################
@@ -102,7 +99,7 @@ def create_message_antithesis(question, candidate, options, context):
     Now do the same for this question: "{question}", where options: ["{options_str}"]. Assistant:
     """
 
-    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: \n"
+    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: "
 
     messages = [
         {"role": "system", "content": """
@@ -113,12 +110,15 @@ def create_message_antithesis(question, candidate, options, context):
         Here's an example of how to do it:
         """},
         {"role": "user", "content": """
-        Question: What is the sun, a star or a planet?
-        Options: ['a star', 'a planet']
-        Candidate answer: a planet
-        Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
-
-        Assistant: The correct answer should be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
+        Question: Jane's Addiction and Weeping Willows, play which genre of music?
+        Options: ['indie', 'rock']
+        Candidate answer: rock
+        Context: Weeping Willows is a Swedish indie rock group that started in 1995. Jane's Addiction is an American rock band from Los Angeles, formed in 1985. The band consists of Perry Farrell (vocals), Dave Navarro (guitar), Stephen Perkins (drums) and Chris Chaney (bass).
+        Assistant: 
+        """
+        },
+        {"role": "assistant", "content": """
+        The context mentions that Weeping Willows is a 'Swedish indie rock group' and Jane's Addiction is an 'American rock band'. Both bands are associated with the 'rock' genre, thus the correct answer is 'rock'.
         """
         },
         {"role": "system", "content": "Now do the same for the following question:"},
@@ -137,7 +137,7 @@ def antithesisGeneration(query, merged, candidate, sources):
 
 def create_message_presynthesis(question, candidate, suggestion, options, context):
 
-    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Suggestion: " + suggestion + "\n Context: " + context + "\n Assistant: \n"
+    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Suggestion: " + suggestion + "\n Context: " + context + "\n Assistant: "
 
     messages = [
         {"role": "system", "content": """
@@ -145,18 +145,32 @@ def create_message_presynthesis(question, candidate, suggestion, options, contex
         You also have at disposal a first tentative answer and a suggestion on which is the correct answer.
         Your goal is to decree which is the most correct answer to the question between the available options according to the context.
 
-        Here's an example of how to do it:
+        Here's a few examples on how to do it:
         """},
         {"role": "user", "content": """
-        Question: What is the sun, a star or a planet?
-        Options: ['a star', 'a planet']
-        Candidate answer: a planet
-        Suggestion: a star is the correct option since the context clearly specifies that the Sun is the star at the center of the Solar System
-        Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
-
-        Assistant: the correct option is 'a star', since the suggestion is grounded in the context, even if the candidate answer does not agree.
+        Question: Jane's Addiction and Weeping Willows, play which genre of music?
+        Options: ['indie', 'rock']
+        Candidate answer: rock
+        Suggestion: The context mentions that Weeping Willows is a 'Swedish indie rock group' and Jane's Addiction is an 'American rock band'. Both bands are associated with the 'rock' genre, thus the correct answer is 'rock'.
+        Context: Weeping Willows is a Swedish indie rock group that started in 1995. Jane's Addiction is an American rock band from Los Angeles, formed in 1985. The band consists of Perry Farrell (vocals), Dave Navarro (guitar), Stephen Perkins (drums) and Chris Chaney (bass).
         """
         },
+        {"role": "assistant", "content": """
+        Assistant: Both the candidate answer and the suggestion agree on the fact that the correct option is 'rock'. Let's check on the context whether or not this is correct. Weeping Willows is an indie rock group, thus they make rock music; Jane's Addiction is a rock band. Consequently the context confirms that the genre performed by both bands is 'rock'. The correct option is 'rock'. 
+        """
+        },
+        
+        {"role": "user", "content": """
+        Question: Between two tennis players Kim Clijsters and Mary Pierce, who is older?
+        Options: ['Kim Clijsters', 'Mary Pierce']
+        Candidate answer: kim clijsters
+        Suggestion: The correct answer is 'Mary Pierce' as she was born on 15 January 1975, which is earlier than Kim Clijsters who was born on 8 June 1983.
+        Context: Kim Antonie Lode Clijsters (] ; born 8 June 1983) is a Belgian former professional tennis player. Clijsters is a former world No. 1 in both singles and doubles. Mary Pierce (born 15 January 1975) is a French retired tennis professional who played on the Women's Tennis Association (WTA) tour. Born in Canada, she is a citizen of Canada, and the United States. Pierce played for France in team competitions and in the Olympics.
+        """
+        },
+        {"role": "assistant", "content": """
+        Assistant: The candidate answer says that the older tennis player is kim clijsters, while the suggestion indicates mary pierce. The context provides the birth dates of both players, thus I can check which of the two options is correct. kim clijsters was born on 8 June 1983, and mary pierce was born on 15 January 1975. By comparing these dates, it's clear that mary pierce is older than kim clijsters. Thus the correct option is 'mary pierce'.
+        """},
         {"role": "system", "content": "Now do the same for the following question:"},
         {"role": "user", "content": user_content}
     ]
@@ -172,10 +186,7 @@ def preSynthGeneration(query, candidate_answer, critique, merged, sources):
 
 def synthesisGeneration(query, merged, pre_answer, sources):
     merged = ast.literal_eval(merged)
-    augmented_prompt = synthesis_chain.invoke({'question': query, 
-                                            'options': merged,
-                                            'critique': pre_answer,
-                                            'context': sources})
+    augmented_prompt = synthesis_chain.invoke({'options': merged, 'suggestion': pre_answer})
 
     normal_string = clean_text(augmented_prompt.text)
     ans = new_model + normal_string + select(merged)
@@ -183,12 +194,12 @@ def synthesisGeneration(query, merged, pre_answer, sources):
 
 def extract_answer_synthesis(text):
     # Trova l'indice in cui inizia il testo "Why or why not the answer is correct:"
-    start_index = text.find("Assistant:\n")
+    start_index = text.find("\n\nAssistant:\n")
 
     
     # Se l'indice è stato trovato, estrai la risposta corretta
     if start_index != -1:
-        start_index += len("Assistant:\n")
+        start_index += len("\n\nAssistant:\n")
         # Estrai il testo dopo "Why or why not the answer is correct:"
         correct_answer_text = text[start_index:].strip()
         return correct_answer_text
@@ -198,12 +209,13 @@ def extract_answer_synthesis(text):
 #############################################
 
 model = AutoModelForCausalLM.from_pretrained(
-    "microsoft/Phi-3-medium-4k-instruct",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct",
     device_map="cuda",
     torch_dtype="auto",
+    token = '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',
     trust_remote_code=True,
 )
-tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-medium-4k-instruct", use_fast=False)
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3.1-8B-Instruct", token = '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', use_fast=False)
 new_model = models.Transformers(model, tokenizer, temperature=0.0)
 
 pipe = pipeline(
@@ -218,49 +230,33 @@ generation_args = {
     "do_sample": False,
 }
 
-#############################################
+##############################################################################################
 
-# dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
+dataset = load_dataset('saracandu/hotpotQA_nli', split="train", trust_remote_code=True)
 
 # select a subset of the queries, just for test:
-# first_queries = dataset['question']
+first_queries = dataset['question']
 
 # same for correct answers and distractors:
-# correct_answers = dataset['answer']
-# possibilities = dataset['options']
+correct_answers = dataset['answer']
+possibilities = dataset['options']
 
 # and for the sources:
-# sources = dataset['passages']
+sources = dataset['passages']
 
 #nli
-# first_nli = dataset['first nli']
-# second_nli = dataset['second nli']
+first_nli = dataset['first nli']
+second_nli = dataset['second nli']
 
-# bart1 = dataset['BART1']
-# bart2 = dataset['BART2']
+bart1 = dataset['BART1']
+bart2 = dataset['BART2']
 
-# rob1 = dataset['ROBERTA1']
-# rob2 = dataset['ROBERTA2']
+rob1 = dataset['ROBERTA1']
+rob2 = dataset['ROBERTA2']
 
-# N_rows = len(dataset)
+N_rows = len(dataset)
 
-#############################################
-
-df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized.csv')
-
-# select a subset of the queries, just for test:
-first_queries = df['query']
-
-# same for correct answers and distractors:
-correct_answers = df['answer']
-possibilities = df['options']
-
-# and for the sources:
-sources = df['sum_supports']
-
-N_rows = len(df)
-
-#############################################
+##############################################################################################
 
 # THESIS
 answers = []
@@ -279,7 +275,7 @@ for i in range(N_rows):
     format_answers.append(extract_answer_synthesis(
         synthesisGeneration(
             first_queries[i], possibilities[i], 
-            ant_answers[i], sources[i])))
+            ant_answers[i])))
 
 # SYNTHESIS
 pre_answers = []
@@ -293,7 +289,17 @@ for i in range(N_rows):
     syn_answers.append(extract_answer_synthesis(
         synthesisGeneration(
             first_queries[i], possibilities[i], 
-            pre_answers[i], sources[i])))
+            pre_answers[i])))
+
+def_answers = ["The correct option is " + clean_text(correct_answer) + " due to what is said in the context." for correct_answer in correct_answers]
+
+# format synthesis
+oracle_answers = []
+for i in range(N_rows):
+    oracle_answers.append(extract_answer_synthesis(
+        synthesisGeneration(
+            first_queries[i], possibilities[i], 
+            def_answers[i])))
 
 #############################################
 
@@ -305,6 +311,7 @@ df = {
     'extracted antithesis': format_answers,
     'pre-synthesis': pre_answers,
     'synthesis': syn_answers,
+    'oracle': oracle_answers,
     'context': sources
 } 
 
@@ -314,5 +321,10 @@ df = pd.DataFrame(df)
 df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 df['synthesis'] = df['synthesis'].apply(clean_text_final)
+df['oracle'] = df['oracle'].apply(clean_text_final)
 
-df.to_csv('base-phimedium-wikihop.csv')
+
+##############################################################################################
+
+
+df.to_csv('baseline-llama-3.1-instruct-8b-ctx.csv')

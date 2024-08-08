@@ -37,20 +37,21 @@ def clean_text_final(text):
 
 # prompt augmentation for the (format of the) synthesis:
 prompt_template = PromptTemplate.from_template(
-"""You are a multiple-choice question answering assistant.
-Choose the most proper option between {options} that best matches with the suggestion. 
+"""You are an information extractor assistant.
+Choose the most proper option between {options} that best matches with the last statement inside the suggestion.
 
-Question: {question}
-Context: {critique}
-Sources: {context}
+For example: 
+Suggestion: The candidate answer is correct. The context states that Kings of Leon is an American rock band, while The New Pornographers is a Canadian indie rock band. Therefore, the correct answer is no.
+Assistant: 'no'
+
+Suggestion: {suggestion}
 
 Assistant:
 """
 )
-augmentation = {"question": itemgetter("question"),
-                "options": itemgetter("options"), 
-                "critique": itemgetter("critique"),
-                "context": itemgetter("context"), }
+augmentation = {"options": itemgetter("options"), 
+                "suggestion": itemgetter("suggestion")
+               }
 synthesis_chain = augmentation | prompt_template 
 
 #############################################
@@ -189,10 +190,7 @@ def preSynthGeneration(query, candidate_answer, critique, merged, sources):
 
 def synthesisGeneration(query, merged, pre_answer, sources):
     merged = ast.literal_eval(merged)
-    augmented_prompt = synthesis_chain.invoke({'question': query, 
-                                            'options': merged,
-                                            'critique': pre_answer,
-                                            'context': sources})
+    augmented_prompt = synthesis_chain.invoke({'options': merged, 'suggestion': pre_answer})
 
     normal_string = clean_text(augmented_prompt.text)
     ans = new_model + normal_string + select(merged)
@@ -296,7 +294,7 @@ for i in range(N_rows):
     format_answers.append(extract_answer_synthesis(
         synthesisGeneration(
             first_queries[i], possibilities[i], 
-            ant_answers[i], sources[i])))
+            ant_answers[i])))
 
 # SYNTHESIS
 pre_answers = []
@@ -310,7 +308,7 @@ for i in range(N_rows):
     syn_answers.append(extract_answer_synthesis(
         synthesisGeneration(
             first_queries[i], possibilities[i], 
-            pre_answers[i], sources[i])))
+            pre_answers[i])))
 
 #############################################
 
@@ -319,7 +317,7 @@ df = {
     'correct': correct_answers,
     'thesis': answers,
     'antithesis': ant_answers,
-    'extracted antithesis': ant_answers,
+    'extracted antithesis': format_answers,
     'pre-synthesis': pre_answers,
     'synthesis': syn_answers,
     'context': sources
