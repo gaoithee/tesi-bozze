@@ -56,14 +56,14 @@ generation_args = {
 
 #############################################
 
-def create_message_antithesis(question, options, context):
+def create_message_antithesis_cot(question, candidate, options, context):
     options_str = '", "'.join(options)
     content = f"""
 
     Now do the same for this question: "{question}", where options: ["{options_str}"]. Assistant:
     """
 
-    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Context: " + context + "\n Assistant: \n"
+    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: \n"
 
     messages = [
         {"role": "system", "content": """
@@ -74,13 +74,12 @@ def create_message_antithesis(question, options, context):
         Here's an example of how to do it:
         """},
         {"role": "user", "content": """
-        Question: What is the sun, a star or a planet?
+        Question: What is the sun?
         Options: ['a star', 'a planet']
+        Candidate answer: a planet
         Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
-        """
-        },
-        {"role": "assistant", "content": """
-        Assistant: Let's consider the options and check whether or not they are correct. The context clearly identifies the Sun as 'the star at the center of the Solar System', thus 'a star' is probably the correct option. On the opposite, 'a planet' is not mentioned in the context, thus it is unlikely to be the correct option. Therefore, the correct option is 'a star'. ### a star
+        
+        Assistant: Let's consider the options and check whether or not they are correct. The context clearly identifies the Sun as 'the star at the center of the Solar System', thus 'a star' is probably the correct option. On the opposite, 'a planet' is not mentioned in the context, thus it is unlikely to be the correct option. Therefore, the correct option is 'a star'.
         """
         },
         {"role": "system", "content": "Now do the same for the following question:"},
@@ -89,9 +88,9 @@ def create_message_antithesis(question, options, context):
 
     return messages
 
-def antithesisGeneration(query, merged, sources):
+def antithesisGeneration(query, merged, candidate, sources):
     merged = ast.literal_eval(merged)
-    prompt = create_message_antithesis(query, merged, sources)
+    prompt = create_message_antithesis_cot(query, candidate, merged, sources)
     output = pipe(prompt, **generation_args)
     return output[0]['generated_text']
 
@@ -146,7 +145,7 @@ def extract_answer_synthesis(text):
 
 #############################################
 
-df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized.csv')
+df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized-test.csv')
 
 # select a subset of the queries, just for test:
 first_queries = df['query']
@@ -166,14 +165,6 @@ N_rows = len(df)
 ant_answers = []
 for i in range(N_rows):
     ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], sources[i]))
-
-# format synthesis
-syn_answers = []
-for i in range(N_rows):
-    syn_answers.append(extract_answer_synthesis(
-        synthesisGeneration(
-            first_queries[i], possibilities[i], 
-            ant_answers[i], sources[i])))
 
 #############################################
 

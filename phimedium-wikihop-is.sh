@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --no-requeue
 #SBATCH --account=dssc
-#SBATCH --job-name="summWiki"
+#SBATCH --job-name="PWis"
 #SBATCH --get-user-env
 #SBATCH --partition=GPU
 #SBATCH --nodes=1
@@ -9,9 +9,9 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --gpus=1                  # <-- TODO adjust this
-#SBATCH --mem=50G                             # <-- TODO adjust this
+#SBATCH --mem=20G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
-#SBATCH --output=slurm_outs/summarize-wikihop.out
+#SBATCH --output=slurm_outs/base-phimed-wikihop-is.out
 
 
 # Standard preamble for debugging
@@ -30,9 +30,9 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 
 # Needed exports
 # export <export_name>=<export_value>
-
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/summarize-wikihop.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/phi-medium/baseline/baseline-phimedium-wikihop-is.py
+
 CMD="python3 -u"
 
 if [ ! -f "$FILE_NAME" ]; then
