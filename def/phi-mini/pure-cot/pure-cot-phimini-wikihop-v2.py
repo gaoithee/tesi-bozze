@@ -56,19 +56,18 @@ generation_args = {
 
 #############################################
 
-def create_message_antithesis_cot(question, candidate, options, context):
+def create_message_antithesis_cot(question, options, context):
     options_str = '", "'.join(options)
     content = f"""
 
     Now do the same for this question: "{question}", where options: ["{options_str}"]. Assistant:
     """
 
-    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: \n"
+    user_content = "Question: " + question + "\n Options: " + str(options) + "\n Context: " + context + "\n Assistant: \n"
 
     messages = [
         {"role": "system", "content": """
         You are an helpful AI assistant. You are asked to determine the most correct answer for a given question, provided a set of possible options.
-        You also have at disposal a first tentative answer that you are required to check with respect to the question and the relevant context.
         Your goal is to decree which is the most correct answer to the question between the available options.
 
         Here's an example of how to do it:
@@ -76,7 +75,6 @@ def create_message_antithesis_cot(question, candidate, options, context):
         {"role": "user", "content": """
         Question: What is the sun?
         Options: ['a star', 'a planet']
-        Candidate answer: a planet
         Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
         
         Assistant: Let's consider the options and check whether or not they are correct. The context clearly identifies the Sun as 'the star at the center of the Solar System', thus 'a star' is probably the correct option. On the opposite, 'a planet' is not mentioned in the context, thus it is unlikely to be the correct option. Therefore, the correct option is 'a star'.
@@ -88,9 +86,9 @@ def create_message_antithesis_cot(question, candidate, options, context):
 
     return messages
 
-def antithesisGeneration(query, merged, candidate, sources):
+def antithesisGeneration(query, merged, sources):
     merged = ast.literal_eval(merged)
-    prompt = create_message_antithesis_cot(query, candidate, merged, sources)
+    prompt = create_message_antithesis_cot(query, merged, sources)
     output = pipe(prompt, **generation_args)
     return output[0]['generated_text']
 

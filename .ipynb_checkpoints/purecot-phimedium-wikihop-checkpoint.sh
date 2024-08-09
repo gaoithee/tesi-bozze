@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --no-requeue
 #SBATCH --account=dssc
-#SBATCH --job-name="phimedPC"
+#SBATCH --job-name="PPC"
 #SBATCH --get-user-env
 #SBATCH --partition=GPU
 #SBATCH --nodes=1

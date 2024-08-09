@@ -96,12 +96,7 @@ def thesisGeneration(query, merged, sources):
 #############################################
 
 def create_message_antithesis_original(question, candidate, options, context):
-    options_str = '", "'.join(options)
-    content = f"""
-
-    Now do the same for this question: "{question}", where options: ["{options_str}"]. Assistant:
-    """
-
+    
     user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Context: " + context + "\n Assistant: \n"
 
     messages = [

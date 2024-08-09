@@ -98,7 +98,7 @@ def thesisGeneration(query, merged, sources):
 
 #############################################
 
-def create_message_antithesis(question, candidate, options, context):
+def create_message_antithesis_cot(question, candidate, options, context):
     options_str = '", "'.join(options)
     content = f"""
 
@@ -114,14 +114,14 @@ def create_message_antithesis(question, candidate, options, context):
         Your goal is to decree which is the most correct answer to the question between the available options.
 
         Here's an example of how to do it:
-        Question: What is the sun, a star or a planet?
+        Question: What is the sun?
         Options: ['a star', 'a planet']
         Candidate answer: a planet
         Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
         """
         },
         {"role": "assistant", "content": """
-        Assistant: \n Let's consider the options and check whether or not they are correct. The context clearly identifies the Sun as 'the star at the center of the Solar System', thus 'a star' is probably the correct option. On the opposite, 'a planet' is not mentioned in the context, thus it is unlikely to be the correct option. Therefore, the correct option is 'a star'.
+        Assistant: Let's consider the options and check whether or not they are correct. The context clearly identifies the Sun as 'the star at the center of the Solar System', thus 'a star' is probably the correct option. On the opposite, 'a planet' is not mentioned in the context, thus it is unlikely to be the correct option. Therefore, the correct option is 'a star'.
         """
         },
         {"role": "user", "content": "Now do the same for the following question: \n" + user_content}
@@ -145,14 +145,14 @@ def extract_antithesis(text):
 
 def antithesisGeneration(query, merged, candidate, sources):
     merged = ast.literal_eval(merged)
-    prompt = create_message_antithesis(query, candidate, merged, sources)
+    prompt = create_message_antithesis_cot(query, candidate, merged, sources)
     inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
     outputs = model.generate(input_ids=inputs.to(model.device), max_new_tokens=500)
     return extract_antithesis(tokenizer.decode(outputs[0]))
 
 #############################################
 
-def create_message_presynthesis(question, candidate, suggestion, options, context):
+def create_message_presynthesis_original(question, options, candidate, suggestion, context):
     user_content = "Question: " + question + "\n Options: " + str(options) + "\n Candidate answer: " + candidate + "\n Suggestion: " + suggestion + "\n Context: " + context 
     chat = [
             {"role": "user", "content": """
@@ -161,13 +161,14 @@ def create_message_presynthesis(question, candidate, suggestion, options, contex
             Your goal is to decree which is the most correct answer to the question between the available options.
     
             Here's an example of how to do it:
-            Question: What is the sun, a star or a planet?
+            Question: What is the sun?
             Options: ['a star', 'a planet']
             Candidate answer: a planet
+            Suggestion: a star is the correct option since the context clearly specifies that the Sun is the star at the center of the Solar System
             Context: The Sun is the star at the center of the Solar System. It is a massive, nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies.
             """},
             {"role": "assistant", "content": """
-            The correct answer should be 'a star' due to the fact that the context explicitly say so. On the opposite, the context never mentions the fact that the Sun could be a planet.
+            The correct option is 'a star', since the suggestion is grounded in the context, even if the candidate answer does not agree.
             """
             },
             {"role": "user", "content": "Now do the same for the following question: "+ user_content}
@@ -176,7 +177,7 @@ def create_message_presynthesis(question, candidate, suggestion, options, contex
     return prompt
 
 def preSynthGeneration(query, candidate_answer, critique, merged, sources):
-    prompt = create_message_presynthesis(query, merged, candidate_answer, critique, sources)
+    prompt = create_message_presynthesis_original(query, merged, candidate_answer, critique, sources)
     inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
     outputs = model.generate(input_ids=inputs.to(model.device), max_new_tokens=500)
     return extract_antithesis(tokenizer.decode(outputs[0]))
@@ -211,7 +212,7 @@ def extract_answer_synthesis(text):
 
 #############################################
 
-df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized.csv')
+df = pd.read_csv('wikihop_dataset/wikihop-merged-summarized-test.csv')
 
 # select a subset of the queries, just for test:
 first_queries = df['query']
@@ -273,4 +274,4 @@ df = pd.DataFrame(df)
 df['correct'] = df['correct'].apply(clean_text_final)
 df['thesis'] = df['thesis'].apply(clean_text_final)
 
-df.to_csv('cot-gemma-9b-wikihop.csv')
+df.to_csv('cot-gemma-9b-wikihop-v2.csv')
