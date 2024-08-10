@@ -1,15 +1,14 @@
 ---------------------------------------------
-SLURM job ID:        775925
-SLURM job node list: gpu002
-DATE:                Fri Aug  9 09:07:30 PM CEST 2024
+SLURM job ID:        775946
+SLURM job node list: gpu001
+DATE:                Sat Aug 10 12:21:13 AM CEST 2024
 ---------------------------------------------
 /orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
   backends.update(_get_backends("networkx.backends"))
 `flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
 Current `flash-attenton` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
-Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:27<02:15, 27.20s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:54<01:49, 27.31s/it]Loading checkpoint shards:  50%|█████     | 3/6 [01:20<01:20, 26.84s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [01:47<00:53, 26.62s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [02:14<00:26, 26.73s/it]Loading checkpoint shards: 100%|██████████| 6/6 [02:33<00:00, 24.25s/it]Loading checkpoint shards: 100%|██████████| 6/6 [02:33<00:00, 25.58s/it]
-Traceback (most recent call last):
-  File "/u/dssc/scandu00/tesi-bozze/def/phi-medium/pure-cot/pure-cot-phimedium-wikihop-v2.py", line 167, in <module>
-    ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], sources[i]))
-TypeError: antithesisGeneration() missing 1 required positional argument: 'sources'
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:32<02:40, 32.12s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [01:01<02:02, 30.68s/it]Loading checkpoint shards:  50%|█████     | 3/6 [01:31<01:31, 30.36s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [02:03<01:01, 30.72s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [02:32<00:30, 30.11s/it]Loading checkpoint shards: 100%|██████████| 6/6 [02:54<00:00, 27.33s/it]Loading checkpoint shards: 100%|██████████| 6/6 [02:54<00:00, 29.00s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
 DONE!
