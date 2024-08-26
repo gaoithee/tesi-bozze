@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --no-requeue
 #SBATCH --account=dssc
-#SBATCH --job-name="ge2Wiki"
+#SBATCH --job-name="gWiki"
 #SBATCH --get-user-env
 #SBATCH --partition=GPU
 #SBATCH --nodes=1
@@ -11,7 +11,7 @@
 #SBATCH --gpus=1                  # <-- TODO adjust this
 #SBATCH --mem=20G                             # <-- TODO adjust this
 #SBATCH --time=04:00:00                       # <-- TODO adjust this
-#SBATCH --output=slurm_outs/base-gemma2b-wikihop.out
+#SBATCH --output=slurm_outs/base-gemma2b-wikihop-test.out
 
 
 # Standard preamble for debugging
@@ -31,7 +31,7 @@ source /u/dssc/scandu00/nlp-env/bin/activate
 # Needed exports
 # export <export_name>=<export_value>
 #variables
-FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/gemma-2-2b-it/baseline-gemma2b-wikihop.py
+FILE_NAME=/u/dssc/scandu00/tesi-bozze/def/gemma-2-2b-it/baseline/baseline-gemma-2-2b-it-wikihop.py
 
 CMD="python3 -u"
 

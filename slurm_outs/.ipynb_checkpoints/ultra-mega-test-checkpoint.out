@@ -1,0 +1,10 @@
+---------------------------------------------
+SLURM job ID:        780708
+SLURM job node list: gpu001
+DATE:                Tue Aug 20 04:07:54 PM CEST 2024
+---------------------------------------------
+  File "/u/dssc/scandu00/tesi-bozze/PECoRe.py", line 157
+    df = {
+    ^
+SyntaxError: invalid syntax
+DONE!

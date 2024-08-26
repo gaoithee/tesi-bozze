@@ -1,0 +1,72 @@
+---------------------------------------------
+SLURM job ID:        781974
+SLURM job node list: gpu001
+DATE:                Wed Aug 21 03:19:05 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+A new version of the following files was downloaded from https://huggingface.co/microsoft/Phi-3-medium-4k-instruct:
+- configuration_phi3.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/microsoft/Phi-3-medium-4k-instruct:
+- modeling_phi3.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attenton` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:  17%|█▋        | 1/6 [00:00<00:00,  7.27it/s]Downloading shards:  33%|███▎      | 2/6 [00:00<00:00,  7.52it/s]Downloading shards:  50%|█████     | 3/6 [00:00<00:00,  7.41it/s]Downloading shards:  67%|██████▋   | 4/6 [00:00<00:00,  7.41it/s]Downloading shards:  83%|████████▎ | 5/6 [00:00<00:00,  7.47it/s]Downloading shards: 100%|██████████| 6/6 [00:00<00:00,  7.42it/s]Downloading shards: 100%|██████████| 6/6 [00:00<00:00,  7.42it/s]
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:31<02:38, 31.63s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [01:03<02:07, 31.76s/it]Loading checkpoint shards:  50%|█████     | 3/6 [01:35<01:35, 31.79s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [02:07<01:03, 31.76s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [02:37<00:31, 31.43s/it]Loading checkpoint shards: 100%|██████████| 6/6 [03:02<00:00, 29.00s/it]Loading checkpoint shards: 100%|██████████| 6/6 [03:02<00:00, 30.36s/it]
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+You are not running the flash-attention implementation, expect numerical differences.
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+Traceback (most recent call last):
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 2606, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 2630, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 8
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/def/phi-medium/cot/hotpot/PEC-cot-phi-medium.py", line 292, in <module>
+    answers.append(extract_answer_thesis(thesisGeneration(first_queries[i], possibilities[i], sources[i])))
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/series.py", line 1112, in __getitem__
+    return self._get_value(key)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/series.py", line 1228, in _get_value
+    loc = self.index.get_loc(label)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 8
+DONE!

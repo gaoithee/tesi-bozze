@@ -1,0 +1,2674 @@
+---------------------------------------------
+SLURM job ID:        785980
+SLURM job node list: gpu002
+DATE:                Fri Aug 23 03:07:52 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:32<00:32, 32.23s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 23.32s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:49<00:00, 24.66s/it]
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/guidance/chat.py:73: UserWarning: Chat template {% for message in messages %}{% if message['role'] == 'system' %}{{'<|system|>
+' + message['content'] + '<|end|>
+'}}{% elif message['role'] == 'user' %}{{'<|user|>
+' + message['content'] + '<|end|>
+'}}{% elif message['role'] == 'assistant' %}{{'<|assistant|>
+' + message['content'] + '<|end|>
+'}}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>
+' }}{% else %}{{ eos_token }}{% endif %} was unable to be loaded directly into guidance.
+                        Defaulting to the ChatML format which may not be optimal for the selected model. 
+                        For best results, create and pass in a `guidance.ChatTemplate` subclass for your model.
+  warnings.warn(f"""Chat template {chat_template} was unable to be loaded directly into guidance.
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+You are not running the flash-attention implementation, expect numerical differences.
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/extractor.py", line 107, in <module>
+    df = pd.DataFrame(df)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/frame.py", line 767, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/pandas/core/internals/construction.py", line 690, in _extract_index
+    raise ValueError(msg)
+ValueError: array length 330 does not match index length 434
+DONE!

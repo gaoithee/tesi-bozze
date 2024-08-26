@@ -1,0 +1,38 @@
+---------------------------------------------
+SLURM job ID:        777354
+SLURM job node list: gpu001
+DATE:                Fri Aug 16 03:30:38 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  3.00s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.13s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.26s/it]
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/def/phi-mini/pure-cot/purecot-phimini-bridge.py", line 168, in <module>
+    ant_answers.append(antithesisGeneration(first_queries[i], possibilities[i], sources[i]))
+  File "/u/dssc/scandu00/tesi-bozze/def/phi-mini/pure-cot/purecot-phimini-bridge.py", line 93, in antithesisGeneration
+    merged = ast.literal_eval(merged)
+  File "/usr/lib64/python3.9/ast.py", line 105, in literal_eval
+    return _convert(node_or_string)
+  File "/usr/lib64/python3.9/ast.py", line 104, in _convert
+    return _convert_signed_num(node)
+  File "/usr/lib64/python3.9/ast.py", line 78, in _convert_signed_num
+    return _convert_num(node)
+  File "/usr/lib64/python3.9/ast.py", line 69, in _convert_num
+    _raise_malformed_node(node)
+  File "/usr/lib64/python3.9/ast.py", line 66, in _raise_malformed_node
+    raise ValueError(f'malformed node or string: {node!r}')
+ValueError: malformed node or string: 0                        Delhi
+1      President Richard Nixon
+2                     American
+3                      alcohol
+4                    Crambidae
+                ...           
+995                      Haiti
+996                Ottis Toole
+997                     Europe
+998         Greater Manchester
+999                   St Kilda
+Name: correct, Length: 1000, dtype: object
+DONE!

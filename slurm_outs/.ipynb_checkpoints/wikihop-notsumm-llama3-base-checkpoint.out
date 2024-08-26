@@ -1,0 +1,13 @@
+---------------------------------------------
+SLURM job ID:        777680
+SLURM job node list: gpu004
+DATE:                Sat Aug 17 08:23:26 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:31<01:35, 31.79s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:48<00:45, 22.69s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:50<00:13, 13.60s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:51<00:00,  8.53s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:51<00:00, 12.91s/it]
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/def/llama3-8b-instruct/baseline-llama3-wikihop-notsum.py", line 225, in <module>
+    correct_answers = df['answer']
+NameError: name 'df' is not defined
+DONE!
