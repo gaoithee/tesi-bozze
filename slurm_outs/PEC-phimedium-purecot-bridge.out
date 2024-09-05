@@ -1,0 +1,14 @@
+---------------------------------------------
+SLURM job ID:        793743
+SLURM job node list: gpu001
+DATE:                Sun Sep  1 10:08:26 AM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attenton` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:33<02:45, 33.14s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [01:07<02:16, 34.07s/it]Loading checkpoint shards:  50%|█████     | 3/6 [01:41<01:41, 33.68s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [02:15<01:08, 34.08s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [02:50<00:34, 34.42s/it]Loading checkpoint shards: 100%|██████████| 6/6 [03:16<00:00, 31.63s/it]Loading checkpoint shards: 100%|██████████| 6/6 [03:17<00:00, 32.84s/it]
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+You are not running the flash-attention implementation, expect numerical differences.
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+DONE!

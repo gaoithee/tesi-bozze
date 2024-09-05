@@ -1,0 +1,6 @@
+---------------------------------------------
+SLURM job ID:        797638
+SLURM job node list: gpu003
+DATE:                Thu Sep  5 10:34:12 AM CEST 2024
+---------------------------------------------
+slurmstepd: error: *** JOB 797638 ON gpu003 CANCELLED AT 2024-09-05T10:34:55 ***

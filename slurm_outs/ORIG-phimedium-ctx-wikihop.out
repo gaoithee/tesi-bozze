@@ -1,0 +1,151 @@
+---------------------------------------------
+SLURM job ID:        793953
+SLURM job node list: gpu002
+DATE:                Sun Sep  1 04:00:28 PM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attenton` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:27<02:16, 27.34s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:43<01:23, 20.79s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:46<00:37, 12.56s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:48<00:17,  8.65s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:51<00:06,  6.49s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:53<00:00,  4.98s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:53<00:00,  8.95s/it]
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+You are not running the flash-attention implementation, expect numerical differences.
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+[2K[2K<IPython.core.display.HTML object>
+Traceback (most recent call last):
+  File "/u/dssc/scandu00/tesi-bozze/def/phi-medium/ctx/wikihop/ORIGINAL-ctx-phi-medium.py", line 301, in <module>
+    pre_answers.append(preSynthGeneration(first_queries[i], possibilities[i], answers[i], ant_answers[i], sources[i]))
+  File "/u/dssc/scandu00/tesi-bozze/def/phi-medium/ctx/wikihop/ORIGINAL-ctx-phi-medium.py", line 185, in preSynthGeneration
+    output = pipe(prompt, **generation_args)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text_generation.py", line 257, in __call__
+    return super().__call__(Chat(text_inputs), **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1254, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1261, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/base.py", line 1161, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/pipelines/text_generation.py", line 351, in _forward
+    generated_sequence = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/generation/utils.py", line 1989, in generate
+    result = self._sample(
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/transformers/generation/utils.py", line 2932, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/dssc/scandu00/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-medium-4k-instruct/ae004ae82eb6eddc32906dfacb1d6dfea8f91996/modeling_phi3.py", line 1286, in forward
+    outputs = self.model(
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/dssc/scandu00/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-medium-4k-instruct/ae004ae82eb6eddc32906dfacb1d6dfea8f91996/modeling_phi3.py", line 1164, in forward
+    layer_outputs = decoder_layer(
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/dssc/scandu00/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-medium-4k-instruct/ae004ae82eb6eddc32906dfacb1d6dfea8f91996/modeling_phi3.py", line 885, in forward
+    attn_outputs, self_attn_weights, present_key_value = self.self_attn(
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/dssc/scandu00/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-medium-4k-instruct/ae004ae82eb6eddc32906dfacb1d6dfea8f91996/modeling_phi3.py", line 405, in forward
+    attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(value_states.dtype)
+  File "/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/torch/nn/functional.py", line 1860, in softmax
+    ret = input.softmax(dim, dtype=dtype)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 942.00 MiB. GPU 0 has a total capacity of 31.74 GiB of which 441.06 MiB is free. Including non-PyTorch memory, this process has 31.30 GiB memory in use. Of the allocated memory 29.19 GiB is allocated by PyTorch, and 1.75 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+DONE!

@@ -1,0 +1,8 @@
+---------------------------------------------
+SLURM job ID:        797627
+SLURM job node list: gpu003
+DATE:                Thu Sep  5 10:32:46 AM CEST 2024
+---------------------------------------------
+/orfeo/cephfs/home/dssc/scandu00/nlp-env/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+slurmstepd: error: *** JOB 797627 ON gpu003 CANCELLED AT 2024-09-05T10:35:49 ***
